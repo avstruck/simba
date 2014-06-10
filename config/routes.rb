@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 
   get 'pieces/new' => 'pieces#new'
 
+  get 'pieces' => 'pieces#index'
+
   get 'users/create' => 'users#create'
 
   get 'users/update' => 'users#update'
