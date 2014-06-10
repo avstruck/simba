@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  image_url: MyString
+  artist_id: 1
+  title: MyString
+  genre: MyString
+  original_value: 1.5
+  art_owner_id: 1
+  copyright_owner_id: 1
+  number_prints: 1
+  art_description: MyText
+  ownership_type: MyString
+
+two:
+  image_url: MyString
+  artist_id: 1
+  title: MyString
+  genre: MyString
+  original_value: 1.5
+  art_owner_id: 1
+  copyright_owner_id: 1
+  number_prints: 1
+  art_description: MyText
+  ownership_type: MyString

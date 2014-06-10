@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  purchase_date: 2014-06-10 12:11:35
+  purchase_type: MyString
+  quantity: 1
+  purchase_price: 1.5
+  initiator_id: 1
+  acceptor_id: 1
+
+two:
+  purchase_date: 2014-06-10 12:11:35
+  purchase_type: MyString
+  quantity: 1
+  purchase_price: 1.5
+  initiator_id: 1
+  acceptor_id: 1
