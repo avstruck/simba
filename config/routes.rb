@@ -1,37 +1,43 @@
 Rails.application.routes.draw do
-  get 'purchases/create' => 'purchases#create'
+  
+  #-----Resource Creation-----
 
-  get 'purchases/show' => 'purchases#show'
-
-  get 'purchases/new' => 'purchases#new'
-
-  get 'galleries/show' => 'galleries#show'
-
-  get 'pieces/create' => 'pieces#create'
-
-  get 'pieces/update' => 'pieces#update'
-
-  get 'pieces/show' => 'pieces#show'
-
-  get 'pieces/delete' => 'pieces#delete'
-
-  get 'pieces/new' => 'pieces#new'
-
-  get 'pieces' => 'pieces#index'
-
-  get 'users/create' => 'users#create'
-
-  get 'users/update' => 'users#update'
-
-  get 'users/delete' => 'users#delete'
-
-  get 'users/show' => 'users#show'
-
+  #to create and update users
   get 'users/new' => 'users#new'
+  post 'users' => 'users#create'
+  get 'users/:id/edit' => 'users#edit'
+  put 'users/:id' => 'users#update'
+  delete 'users/:id' => 'users#destroy'
+  
+  #to upload (create) and change (update) art pieces
+  get 'pieces/new' => 'pieces#new'
+  post 'pieces' => 'pieces#create'
+  get 'pieces/:id/edit' => 'pieces#edit'
+  put 'pieces/:id' => 'pieces#update'
+  delete 'pieces/:id' => 'pieces#destroy'
 
+
+  #----------Functions----------
+
+  #to browse all photos and one specific piece
   root 'pieces#index'
+  get 'pieces/:id' => 'pieces#show'
 
+  #to buy a piece of art
+  get 'purchases/new' => 'purchases#new'
+  post 'purchases' => 'purchases#create'
+
+  #to see a user's gallery
+  get 'galleries/:id' => 'galleries#show'
+
+  # sign in and accounts
+  # see http://rubydoc.info/github/plataformatec/devise/master/ActionDispatch/Routing/Mapper:devise_for
+  #   for the routes
   devise_for :users
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
