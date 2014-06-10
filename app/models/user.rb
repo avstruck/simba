@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   has_many :sell_purchases, class_name: "Purchase", foreign_key: :acceptor_id
 
   validates :email, presence: true, uniqueness: true
-  validates :username, presence: true, uniqueness: true
+  #validates :username, presence: true, uniqueness: true
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

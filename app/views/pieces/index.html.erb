@@ -5,8 +5,6 @@
   <p><%= link_to "Profile", "/users/#{current_user.id}" %></p>
   <p><%= link_to "Logout", destroy_user_session_path, method: :delete %></p>
 <% else %>
-  <p><%= link_to 'Create Account', users_new_path %><p>
-  
   <h2>Sign in</h2>
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>

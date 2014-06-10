@@ -4,7 +4,6 @@ Rails.application.routes.draw do
 
   #to create and update users
   get 'users/new' => 'users#new'
-  post 'users' => 'users#create'
   get 'users/:id/edit' => 'users#edit'
   put 'users/:id' => 'users#update'
   
