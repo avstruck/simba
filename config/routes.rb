@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   post 'users' => 'users#create'
   get 'users/:id/edit' => 'users#edit'
   put 'users/:id' => 'users#update'
-  delete 'users/:id' => 'users#destroy'
   
   #to upload (create) and change (update) art pieces
   get 'pieces/new' => 'pieces#new'
