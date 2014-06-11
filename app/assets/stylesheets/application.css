@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+.header {
+	position: fixed;
+	top: Opx;
+	margin: 0 auto;
+	
+	border-bottom: 2px;
+}
+
+.header_title {
+	position: fixed;
+	top: 5px;
+	left: 10px;
+}
+
+.header_links {
+	position: fixed;
+	top: 5px;
+	right: 5px;
+}
