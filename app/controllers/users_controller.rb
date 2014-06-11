@@ -1,18 +1,13 @@
 class UsersController < ApplicationController
   # before_filter :authenticate_user!
 
-  def new
-  end
-
-  def create
-  end
-
   def edit
   end
 
   def update
   end
 
-  def destroy
+  def show
+    @user = User.find(params[:id])
   end
 end
