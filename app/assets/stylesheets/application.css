@@ -15,21 +15,21 @@
  */
 
 .header {
-	position: fixed;
+	/*position: fixed;*/
 	top: Opx;
-	margin: 0 auto;
-	
-	border-bottom: 2px;
+	background-size:80px 60px;
+		
 }
 
 .header_title {
-	position: fixed;
+	/*position: fixed;*/
 	top: 5px;
-	left: 10px;
+	left: 35px;
 }
 
 .header_links {
-	position: fixed;
+	/*position: fixed;*/
 	top: 5px;
 	right: 5px;
 }
+
