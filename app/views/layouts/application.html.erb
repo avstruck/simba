@@ -8,11 +8,32 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="header">
+ <div class="header">
+    <nav> 
+      <a href="/" class="header_blocks">
+        <h3 class="header_title">Hello Simba!</h3>
+      </a>
+        <a href="/" class="header_blocks">
+          Search
+        </a>
+        <a href="/" class="header_blocks">
+          Genre
+        </a>
+        <a href="/" class="header_blocks">
+          Price
+        </a>
+        <a href="/users/sign_in" class="header_blocks">
+          Sign in
+        </a>
+        <a href="/users/sign_up" class="header_blocks">
+          Sign up
+        </a>
+    </nav>
+    </div>
   
-  <div class="header_title">
+<!--   <div class="header_title">
     <h1> Hello Simba! </h1>
-  </div>
+  </div> -->
 <!--   <% if current_user %>
     <p>Are you an artist? Upload your art <%= link_to "here", "/pieces/new" %>.</p>
   <% end %> -->

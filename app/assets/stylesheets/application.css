@@ -25,6 +25,7 @@
 }
 
 .header a {
+	text-align: right;
 	display: inline-block;
 	position: relative;
 	height: 50x;
