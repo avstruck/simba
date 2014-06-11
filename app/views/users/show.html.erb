@@ -1,0 +1,11 @@
+<h4>This is your profile with your bio & gallarayyy</h4>
+
+
+
+<h1><%= @user.username %></h1>
+<p><%= @user.bio %><p>
+
+<% if (user_signed_in? && (current_user.id == params[:id].to_i)) %>
+  <%= link_to "Edit Info", edit_user_registration_path, method: :put %><br />
+  <p>The total price of your gallery is $100.<p>
+<% end %>
