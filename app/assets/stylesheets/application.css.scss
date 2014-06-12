@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+img {
+	padding: 0;
+}
 
 .header {
 	position: fixed;
@@ -20,7 +23,7 @@
 	height: 48px;
 	padding: 0;
 	margin: 0 auto;
-	background-color: #FFA500;
+	background-color: rgba(223, 223, 223, .7);
 	/*min-width: 600px;*/
 }
 
@@ -58,7 +61,7 @@ nav {
 }
 
 .footer {
-	background-color: #FFA500;
+	background-color: rgb(223, 223, 223);
 	clear: both;
 	text-align: center;
 	text-transform: uppercase;
@@ -68,6 +71,10 @@ nav {
 	div {
 		padding-top: 40px;
 	}
+}
+
+.browse_content {
+	font-family: 'EB Garamond', serif;
 }
 
 .modalDialog {
