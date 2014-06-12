@@ -1,2 +1,22 @@
-<h1>Piece#show</h1>
-<p>Find me in app/views/piece/show.html.erb</p>
+<div class="show_header">
+	<h4>Welcome to Viewer!</h4>
+</div>
+<br><br>
+<div class="row">
+	<div class="col-md-3">
+			<p>Title: #{piece_id.title}</p>
+			<p>Artist: #{piece_id.artist_id}</p>
+			<p>Genre: #{piece_id.genre}</p>
+			<p>Description: #{piece_id.art_description}</p>
+			<p>Prints: #{piece_id.number_prints}</p>
+			<p>Owner: #{piece_id.art_owner_id}</p>
+			<p>Asking Price: #{piece_id.original_value}</p>
+		</div>
+	<div class="col-md-9">
+		
+			<img src="http://images.rapgenius.com/e2cef3deb58fb77683e32bdbf9efbb0f.1000x800x1.jpg">	
+
+	</div>
+</div>
+
+

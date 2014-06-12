@@ -8,6 +8,61 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+ <div class="header">
+    <nav> 
+      <a href="/" class="header_blocks">
+        <h3 class="header_title">Hello Simba!</h3>
+      </a>
+        <a href="/" class="header_blocks">
+          Search
+        </a>
+        <a href="/" class="header_blocks">
+          Genre
+        </a>
+        <a href="/" class="header_blocks">
+          Price
+        </a>
+        <a href="/users/sign_in" class="header_blocks">
+          Sign in
+        </a>
+        <a href="/users/sign_up" class="header_blocks">
+          Sign up
+        </a>
+    </nav>
+    </div>
+  
+<!--   <div class="header_title">
+    <h1> Hello Simba! </h1>
+  </div> -->
+<!--   <% if current_user %>
+    <p>Are you an artist? Upload your art <%= link_to "here", "/pieces/new" %>.</p>
+  <% end %> -->
+
+  <% if current_user %>
+    <p>You're signed in as <%= current_user.username %>.</p>
+    <p><%= link_to "Profile", "/users/#{current_user.id}" %></p>
+    <p><%= link_to "Logout", destroy_user_session_path, method: :delete %></p>
+  <% else %>
+    <!-- <h2>Sign in</h2> -->
+
+<!--     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div><%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %></div>
+
+    <div><%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "off" %></div>
+
+    <% if devise_mapping.rememberable? -%>
+      <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+    <% end -%> -->
+
+  <!--   <div><%= f.submit "Sign in" %></div> -->
+  <% end %>
+  <div class="header_links">
+    <%= render "devise/shared/links" %>
+  </div>
+<% end %>
+</div>
 
 <%= yield %>
 
