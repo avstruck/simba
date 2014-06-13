@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="header">
+      <nav>
+        <div class="nav-item main">
+          Simba lots of stuff!
+        </div>
+        <% if current_user %>
+          <div class="nav-item">
+            <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+          </div>
+          <div class="nav-item">
+            <%= link_to current_user.username, "/users/#{current_user.id}" %>
+          </div>
+        <% else %>
+          <div class="nav-item">
+            <a href="#sign_in">Sign in</a>
+          </div>
+          <div class="nav-item">
+            <a href="/">Sign up</a>
+          </div>
+        <% end %>
+        <div class="nav-item">
+          <a href="/">Price</a>
+        </div>
+        <div class="nav-item">
+          <a href="/">Genre</a>
+        </div>
+        <div class="nav-item">
+          <a href="/">Search</a>
+        </div>
+      </nav>
+    </div>
+  <img src="assets/test.png" alt="test">
+  <br><br><br>  
+  <div class="browse_content">
+    <p>Welcome to Simba. The majority of current art websites are difficult to use and directed at very specific audiences. We hope to unify professional and casual art enthusiasts on one credible site that makes it enjoyable to both buy and just browse art.
+
+    Cupcake ipsum dolor sit amet cupcake. Carrot cake bonbon chocolate cake sugar plum brownie. Gingerbread cookie tootsie roll jujubes cotton candy jujubes. Dessert sugar plum jelly-o. Pudding biscuit jelly-o cookie halvah apple pie cake brownie cheesecake. Cotton candy jujubes jelly caramels pie cheesecake caramels marshmallow. Sweet cake donut chupa chups. Candy canes cheesecake gummi bears lemon drops pastry gummies. Croissant cheesecake donut caramels brownie gingerbread tiramisu. Candy donut cake cheesecake caramels apple pie. Sweet bear claw liquorice sweet cake pie. Oat cake soufflé marzipan.
+    
+    Tiramisu sweet roll soufflé powder cheesecake fruitcake. Unerdwear.com biscuit brownie. Jelly pastry pudding dessert dessert caramels. Chupa chups tiramisu liquorice bonbon croissant. Soufflé ice cream cupcake. Lemon drops cake muffin. Topping cheesecake donut icing. Icing bear claw chupa chups macaroon. Oat cake donut liquorice. Applicake cake caramels marshmallow oat cake danish. Gingerbread chupa chups ice cream icing cheesecake. Sweet roll danish cookie.</p>
+
+    <p>Are you an artist? Upload your art <%= link_to "here", "/pieces/new" %>.</p>
+  </div>  
+  <div class="footer">
+    <div>Copyright © Simba</div>
+  </div>
+
+    
+  </body>
+  
+</html>
+
+
+<div id="sign_in" class="modalDialog">
+  <div>
+    <a href="#close" title="Close" class="close">X</a>
+    <h2>Sign in</h2>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div><%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true %></div>
+
+      <div><%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "off" %></div>
+
+      <% if devise_mapping.rememberable? -%>
+      <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+      <% end %>
+
+      <div><%= f.submit "Sign in" %></div>
+    <% end %> 
+  </div>
+<div>
+
+
+<div id="masonry-container" class="transitions-enabled infinite-scroll centered fluid  clearfix">
+    <div class="box col3">
+        <p>
+          <%= image_tag asset_path "stream.jpg"%>
+        </p>
+    </div>
+    <div class="box col3">
+        <p>
+          <%= image_tag asset_path "arch_sketch.jpg"%>
+        </p>
+    </div>
+    <div class="box col3">
+        <p>
+          <%= image_tag asset_path "bride.jpg"%>
+        </p>
+    </div>
+  
+    <div class="box col3">
+        <p>
+          <%= image_tag asset_path "court_house.jpg", class:"col-md-4" %>
+        </p>
+    </div>
+    <div class="box col3">
+        <p>
+          <%= image_tag asset_path "cover-st-anthonys-church.jpg", class:"col-md-4" %>
+        </p>
+    </div>
+    <div class="box col3">
+        <p>
+          <%= image_tag asset_path "dark_clouds.jpg", class:"col-md-4" %>
+        </p>
+    </div>
+   
+    
+    <div class="box col3">
+        <p>
+         <%= image_tag asset_path "sunflower.jpg", class:"col-md-4" %>
+        </p>
+    </div>
+    <div class="box col3">
+        <p>
+          <%= image_tag asset_path "trees.jpg", class:"col-md-4" %>
+        </p>
+    </div>
+    <div class="box col3">
+        <p>
+        <%= image_tag asset_path "white_horses.jpg", class:"col-md-4" %>
+        </p>
+    </div>
+    <div class="box col3">
+        <p>
+          <%= image_tag asset_path "elephant.jpg"%>
+        </p>
+    </div>
+    <div class="box col3">
+        <p>
+          <%= image_tag asset_path "desert.jpg"%>
+        </p>
+    </div>
+    <div class="box col3">
+        <p>
+          <%= image_tag asset_path "gazebo.jpg"%>
+        </p>
+    </div>
+    <div class="box col3">
+        <p>
+          <%= image_tag asset_path "eye.jpg"%>
+        </p>
+    </div>
+    <div class="box col3">
+        <p>
+          <%= image_tag asset_path "Howard_Fogg_Art_Train_Painting_SHHC008(1).jpg"%>
+        </p>
+    </div>
+   <div class="box col3">
+        <p>
+          <%= image_tag asset_path "white_horses.jpg"%>
+        </p>
+    </div>
+    <div class="box col3">
+        <p>
+          <%= image_tag asset_path "lakehouse.jpg"%>
+        </p>
+    </div>
+    <div class="box col3">
+        <p>
+          <%= image_tag asset_path "farm_house.jpg"%>
+        </p>
+    </div>
+    <div class="box col3">
+        <p>
+          <%= image_tag asset_path "sunset.jpg"%>
+        </p>
+    </div>
+    <div class="box col3">
+        <p>
+          <%= image_tag asset_path "waves.jpg"%>
+        </p>
+    </div>
+    <div class="box col3">
+        <p>
+          <%= image_tag asset_path "watermelon.jpg"%>
+        </p>
+    </div>
+   
+  </div>
+</div>
+
+
+
+
+

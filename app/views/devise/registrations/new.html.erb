@@ -6,11 +6,23 @@
   <div><%= f.label :email %><br />
   <%= f.email_field :email, autofocus: true %></div>
 
+  <div><%= f.label :username %><br />
+  <%= f.text_field :username %></div>
+
   <div><%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "off" %></div>
 
   <div><%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+<!-- 
+  <div><%= f.label :type %><br />
+  <%= f.select :type, ['Artist' , 'Patron'], autofocus: true %></div> -->
+
+  <div><%= f.label :'Tell us about yourself:' %><br />
+  <%= f.text_area :bio, autofocus: true %></div>
+
+  <div><%= f.label :'address (for shipping purposes)' %><br />
+  <%= f.text_area :address, autofocus: true %></div>
 
   <div><%= f.submit "Sign up" %></div>
 <% end %>

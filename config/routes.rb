@@ -3,9 +3,7 @@ Rails.application.routes.draw do
   #-----Resource Creation-----
 
   #to create and update users
-  get 'users/new' => 'users#new'
-  post 'users' => 'users#create'
-  get 'users/:id/edit' => 'users#edit'
+  #get 'users/:id/edit' => 'users#edit'
   put 'users/:id' => 'users#update'
   
   #to upload (create) and change (update) art pieces
@@ -26,7 +24,8 @@ Rails.application.routes.draw do
   get 'purchases/new' => 'purchases#new'
   post 'purchases' => 'purchases#create'
 
-  #to see a user's gallery
+  #to see a user's profile, which includes bio, gallery/collection
+  get 'users/:id' => 'users#show'
   get 'galleries/:id' => 'galleries#show'
 
   # sign in and accounts

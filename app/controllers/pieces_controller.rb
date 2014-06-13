@@ -2,6 +2,7 @@ class PiecesController < ApplicationController
   # before_filter :authenticate_user!
 
   def new
+    @new_piece = Piece.new
     # redirectif !user_signed_in?
   end
 
