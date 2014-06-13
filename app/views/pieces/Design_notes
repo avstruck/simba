@@ -1,0 +1,17 @@
+Design
+
+in application.css.scss:
+
+require_tree . #at bottom
+require 
+
+
+to require bootstrap gem :
+		
+		@import "bootstrap";
+		@import "main";
+		@import "style";
+
+in routes:
+
+		"main#index"

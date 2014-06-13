@@ -10,6 +10,35 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
+
  *= require_self
- */
+ 
+ *= require 'masonry/basic'
+ *= require 'masonry/centered'
+ *= require 'masonry/fluid'
+ *= require 'masonry/gutters'
+ *= require 'masonry/infinitescroll'
+ *= require 'masonry/right-to-left'
+ *= require 'masonry/transitions'
+
+  *= require_tree .
+*/
+
+
+
+/* Infinite Scroll loader */
+#infscr-loading { 
+  text-align: center;
+  z-index: 100;
+  position: fixed;
+  left: 45%;
+  bottom: 40px;
+  width: 200px;
+  padding: 10px;
+  background: #000; 
+  opacity: 0.8;
+  color: #FFF;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+}
