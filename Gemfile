@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'paypal-sdk-rest'
 gem 'masonry-rails'
 gem 'devise'
 gem 'paperclip', '~> 4.1.1'
