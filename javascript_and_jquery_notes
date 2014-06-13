@@ -1,0 +1,28 @@
+javascript and jquery
+
+declaring a variable 
+	var x = "Hello";
+	#=> undefined
+	x
+	#=> Hello
+
+
+Make sure you have semicolons at the end of lines
+
+Declaring Functions
+	function shout(msg) {alert(msg);}
+	undefined
+	shout('Hey')
+	#=> a browser popup alert is shown with "Hey"
+
+you always need the parentheses 
+
+printing to console
+	console.log('hey')
+	hey
+	undefined
+
+function get(url, data, onSuccess) {onSuccess();}
+undefined
+get('www.place.com', {"q": "test"}, function() {alert('hey');});
+// a popup laert with 'hey' is shown

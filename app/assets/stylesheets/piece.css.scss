@@ -1,6 +1,30 @@
-// Place all the styles related to the Piece controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#masonry-container {
+  background: #FFF;
+  padding: 5px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  clear: both;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+
+
+.masonry-brick {
+
+	max-width: 300px;
+	
+
+}
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+.centered { margin: 0 auto; }
+
 
 .show_header {
 	width: 100%;
@@ -24,3 +48,4 @@ img {
 	padding-left: 150px;
 	padding-top: 100px;
 }
+

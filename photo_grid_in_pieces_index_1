@@ -1,0 +1,43 @@
+<div class = "container_fluid">
+    <div class = "row">
+        <div class="col-md-4">
+          <%= image_tag asset_path "stream.jpg"%>
+        </div>
+        <div class="col-md-4">
+          <%= image_tag asset_path "arch_sketch.jpg"%>
+        </div>
+       <div class="col-md-4">
+          <%= image_tag asset_path "bride.jpg"%>
+        </div>
+  
+        <div class="col-md-4">
+          <%= image_tag asset_path "court_house.jpg", class:"col-md-4" %>
+        </div>
+        <div class="col-md-4">
+          <%= image_tag asset_path "cover-st-anthonys-church.jpg", class:"col-md-4" %>
+        </div>
+        <div class="col-md-4">
+          <%= image_tag asset_path "dark_clouds.jpg", class:"col-md-4" %>
+        </div>
+  
+    
+        <div class="col-md-4">
+          < %= image_tag asset_path "path.jpg", class:"col-md-4" %>
+        </div>
+        <div class="col-md-4">
+         <%= image_tag asset_path "sunflower.jpg", class:"col-md-4" %>
+        </div>
+        <div class="col-md-4">
+          <%= image_tag asset_path "trees.jpg", class:"col-md-4" %>
+        </div>
+        <div class="col-md-4">
+        <%= image_tag asset_path "white_horses.jpg", class:"col-md-4" %>
+        </div>
+        <div class="col-md-4">
+        <%= image_tag asset_path "sunset.jpg", class:"col-md-4" %>
+        </div>
+        <div class="col-md-4">
+        <%= image_tag asset_path "modern_house.jpg", class:"col-md-4" %>
+        </div>
+  </div>
+</div>

@@ -1,0 +1,81 @@
+Search, Pagination, and Ajax
+
+Searching 
+
+As you work with larger lists of data, we should simplify navigtion for users
+
+How do we search data?
+	simplest seach operates in a single field
+
+
+How do we implement search? 
+	view
+		we need to add a text field to take input
+	controller
+		we need to modify our controller actions to handle a search query from our form
+	model
+		we need to filter data we display to only show matches of our query
+
+Code-Along
+	
+
+	go to your view:
+		<%= form_tag "/projects", method :"GET" do %>
+		<%= text_field_tag '	', params[:q] %>
+		<%= f.submit
+
+
+	in routes: 
+		get 'projects' => 'projects#index'
+
+
+	in project.rb: 
+		def self.search(query)
+			if query
+				Project.where("name = LIKE'%#{query}%'")
+			else
+				Project.all
+			end
+		end
+
+	in controller:
+		def index
+			@projects = Project.search(params[:q])
+			@project = Project.new
+
+	in controller
+
+
+PAGINATION
+
+	use will_paginate
+	go to github for will_paginate and put it in Gemfile
+	bundle installl
+
+
+	e.g. 
+		@posts = Post.paginate(:page => params[page], :per_page => 10) #limits to 10 items per page
+
+	then in view
+		<%= will_paginate @projects %>
+
+----------------------------
+Javascript and JQuery 
+
+
+
+in terminal:
+		rails generate jquery install
+
+
+
+
+
+
+
+
+
+
+
+
+
