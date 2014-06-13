@@ -24,28 +24,19 @@
   *= require_tree .
 */
 
+#masonry-container {
+	background: transparent;
+}
 
-
-/* Infinite Scroll loader */
-#infscr-loading { 
-  text-align: center;
-  z-index: 100;
-  position: fixed;
-  left: 45%;
-  bottom: 40px;
-  width: 200px;
-  padding: 10px;
-  background: #000; 
-  opacity: 0.8;
-  color: #FFF;
-  -webkit-border-radius: 10px;
-     -moz-border-radius: 10px;
-          border-radius: 10px;
+body {
+	background-image: url("/assets/paper.png");
 }
 
 
 img {
-	padding: 0;
+	border: solid;
+	border-width: 1px;
+	border-color: #7F7F7F;
 }
 
 .header {
@@ -106,6 +97,24 @@ nav {
 
 .browse_content {
 	font-family: 'EB Garamond', serif;
+}
+
+.art_title {
+
+	font-style: italic;
+}
+.artist_name {
+	font-style: bold;
+}
+
+p {
+	font-size: 16px;
+	line-height: .9;
+	color: #7F7F7F;
+	text-align: right;
+
+
+
 }
 
 /*.modalDialog {
