@@ -15,7 +15,10 @@
           </div>
         <% else %>
           <div class="nav-item">
-            <a href="#sign_in">Sign in</a>
+            <!-- <a href="#sign_in">Sign in</a> -->
+            <button class="btn btn-primary btn" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+            </button>
           </div>
           <div class="nav-item">
             <a href="/">Sign up</a>
@@ -53,7 +56,7 @@
 </html>
 
 
-<div id="sign_in" class="modalDialog">
+<!-- <div id="sign_in" class="modalDialog">
   <div>
     <a href="#close" title="Close" class="close">X</a>
     <h2>Sign in</h2>
@@ -71,7 +74,38 @@
       <div><%= f.submit "Sign in" %></div>
     <% end %> 
   </div>
-<div>
+<div> -->
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModal">Sign in</h4>
+      </div>
+      <div class="modal-body">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div><%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true %></div>
+
+          <div><%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "off" %></div>
+
+          <% if devise_mapping.rememberable? -%>
+          <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+          <% end %>
+
+          <div><%= f.submit "Sign in" %></div>
+        <% end %> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
