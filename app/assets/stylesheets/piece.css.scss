@@ -1,6 +1,5 @@
 
 #masonry-container {
-  background: #FFF;
   padding: 5px;
   margin-bottom: 20px;
   border-radius: 5px;
@@ -14,6 +13,7 @@
 .masonry-brick {
 
 	max-width: 300px;
+	background-color: transparent;
 	
 
 }
@@ -26,20 +26,30 @@
 .centered { margin: 0 auto; }
 
 
-.show_header {
-	width: 100%;
-	background-color: #8976ff;
-	height: 35px;
-	position: fixed;
-	margin-top: -5px;
-	border: 2px solid;
-	border-radius: 7px;
-	text-align: center;
-}
+
 
 .col-md-9 {
 	background-image:url('http://leicester.tab.co.uk/wp-content/blogs.dir/41/files/2013/10/black.png');
 	height: 585px;
 	width: 750px;
 }
+
+/* Infinite Scroll loader */
+#infscr-loading { 
+  text-align: center;
+  z-index: 100;
+  position: fixed;
+  left: 45%;
+  bottom: 40px;
+  width: 200px;
+  padding: 10px;
+  background: #000; 
+  opacity: 0.8;
+  color: #FFF;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+}
+
+
 
