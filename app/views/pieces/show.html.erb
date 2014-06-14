@@ -1,10 +1,9 @@
-<div class="show_header">
+<!-- <div class="show_header">
 	<h4>Welcome to Viewer!</h4>
-</div>
+</div> -->
 <br><br>
-<div class="row">
+<div class="row" style="margin-top: -40px;">
 	<div class="col-md-3">
-
 			<p>Title: <%= @piece.title %></p>
 			<p>Artist: <%= @piece.artist_id %></p>
 			<p>Genre: <%= @piece.genre %></p>
@@ -30,12 +29,7 @@
 				</form>
 			</p>
 		</div>
-
 	<div class="col-md-9">
-		
 			<%= image_tag asset_path @piece.image_url %>
-
 	</div>
 </div>
-
-

@@ -3,7 +3,7 @@
   <body>
     <div class="header">
       <nav>
-        <div class="nav-item main">
+        <div class="nav-item main" style="font-size:350%">
           Simba
         </div>
         <% if current_user %>
@@ -42,7 +42,7 @@
               <%= link_to (image_tag asset_path i.image_url), "pieces/#{i.id}" %>
               <figcaption>
                 <p class = "art_title"><%= i.title %></p>
-                <p class = "artist_name"><%= i.artist.username%></p>
+               <!--  <p class = "artist_name"></p> -->
                 $<p><%= i.original_value %></p>
               </figcaption>
             </figure>
