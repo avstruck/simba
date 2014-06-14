@@ -1,10 +1,10 @@
-<div class="show_header">
+<!-- <div class="show_header">
 	<h4>Welcome to Viewer!</h4>
-</div>
+</div> -->
 <br><br>
-<div class="row">
+<div class="row" style="margin-top: -40px;">
 	<div class="col-md-3">
-
+			<br><br><br><br>
 			<p>Title: <%= @image.title %></p>
 			<p>Artist: <%= @image.artist_id %></p>
 			<p>Genre: <%= @image.genre %></p>
@@ -33,7 +33,7 @@
 
 	<div class="col-md-9">
 		
-			<%= image_tag asset_path @image.image_url %>
+			<%= image_tag asset_path @image.image_url%>
 
 	</div>
 </div>

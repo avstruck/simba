@@ -3,7 +3,7 @@
   <body>
     <div class="header">
       <nav>
-        <div class="nav-item main">
+        <div class="nav-item main" style="font-size:350%">
           Simba
         </div>
         <% if current_user %>
@@ -16,7 +16,7 @@
         <% else %>
           <div class="nav-item">
             <!-- <a href="#sign_in">Sign in</a> -->
-            <button class="btn btn-primary btn" data-toggle="modal" data-target="#myModal">
+            <button class="btn btn-primary btn" data-toggle="modal" data-target="#myModal" style="background-color: black; border-color: black; font-size: 80%; margin-bottom:11px;">
             Launch demo modal
             </button>
           </div>
@@ -45,7 +45,7 @@
               <%= link_to (image_tag asset_path i.image_url), "pieces/#{i.id}" %>
               <figcaption>
                 <p class = "art_title"><%= i.title %></p>
-                <p class = "artist_name"><%= i.artist.username%></p>
+               <!--  <p class = "artist_name"></p> -->
                 $<p><%= i.original_value %></p>
               </figcaption>
             </figure>
