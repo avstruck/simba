@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+
+
+  # sign in and accounts
+  # see http://rubydoc.info/github/plataformatec/devise/master/ActionDispatch/Routing/Mapper:devise_for
+  #   for the routes
+  devise_for :users
   
   #-----Resource Creation-----
 
@@ -28,10 +34,6 @@ Rails.application.routes.draw do
   get 'users/:id' => 'users#show'
   get 'galleries/:id' => 'galleries#show'
 
-  # sign in and accounts
-  # see http://rubydoc.info/github/plataformatec/devise/master/ActionDispatch/Routing/Mapper:devise_for
-  #   for the routes
-  devise_for :users
 
 
 
