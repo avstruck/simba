@@ -19,10 +19,10 @@ class PiecesController < ApplicationController
   end
 
   def index
-    @images = Piece.all
+    @pieces = Piece.all
   end
 
   def show
-    @image = Piece.find(params[:id])
+    @piece = Piece.find(params[:id])
   end
 end

@@ -1,41 +1,52 @@
 <!DOCTYPE html>
 <html>
   <body>
-		<h4>This is your profile with your bio & gallarayyy</h4>
-
-		<h1><%= @user.username %></h1>
-		<p><%= @user.bio %><p>
-
-		<% if (user_signed_in? && (current_user.id == params[:id].to_i)) %>
-		  <a href="#myModal" data-toggle="modal">Account</a>
-		  <p>The total price of your gallery is <%= @gallery_value %>.<p>
-		<% end %>
+		<div class=user_profile>
+			<h1><%= @user.username %></h1>
+			<p><%= @user.bio %><p>
+				<% if (user_signed_in? && (current_user.id == params[:id].to_i)) %>
+				  <a href="#myModal" data-toggle="modal">Account</a> | The total price of your gallery is $<%= @gallery_value %>.
+				<% end %>
+		</div>
+		<hr class=line>
+		
+		<div class="browse_content">
+	        <div id="masonry-container" class="transitions-enabled infinite-scroll centered fluid  clearfix">
+	          <% @pieces.each do |i| %>
+	            <figure class="box col3">
+	              <%= link_to (image_tag asset_path i.image_url), "pieces/#{i.id}" %>
+	              <figcaption>
+	                <p class = "art_title"><%= i.title %></p>
+	                <p class = "artist_name"><%= i.artist.username%></p>
+	                $<p><%= i.original_value %></p>
+	              </figcaption>
+	            </figure>
+	          <% end %>  
+	        </div>
+  		</div>
 
 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		  <div class="modal-dialog">
 		    <div class="modal-content">
 		      <div class="modal-header">
 		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		        <h4 class="modal-title" id="myModal">Edit</h4>
+		        <h4 class="modal-title" id="myModal">Edit or Delete Account</h4>
 		      </div>
 		      <div class="modal-body">
-		        <h2>Edit <%= resource_name.to_s.humanize %></h2>
-						<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-						  <%= devise_error_messages! %>
-						  <div><%= f.label :email %><br />
-						  <%= f.email_field :email, autofocus: true %></div>
-						  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-						    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-						  <% end %>
-						  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-						    <%= f.password_field :password, autocomplete: "off" %></div>
-						  <div><%= f.label :password_confirmation %><br />
-						    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
-						  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-						    <%= f.password_field :current_password, autocomplete: "off" %></div>
-						<h3>Cancel my account</h3>
-
-						<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+				<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+				  <%= devise_error_messages! %>
+				  <div><%= f.label :email %><br />
+				  <%= f.email_field :email, autofocus: true %></div>
+				  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+				    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+				  <% end %>
+				  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+				    <%= f.password_field :password, autocomplete: "off" %></div>
+				  <div><%= f.label :password_confirmation %><br />
+				    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+				  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+				    <%= f.password_field :current_password, autocomplete: "off" %></div>
+				<%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
 		      </div>
 		      <div class="modal-footer">
 		      	<div><%= f.submit "Update" %></div>
