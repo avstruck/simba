@@ -4,14 +4,13 @@
 <br><br>
 <div class="row" style="margin-top: -40px;">
 	<div class="col-md-3">
-			<br><br><br><br>
-			<p>Title: <%= @image.title %></p>
-			<p>Artist: <%= @image.artist_id %></p>
-			<p>Genre: <%= @image.genre %></p>
-			<p>Description: <%= @image.art_description %></p>
-			<p>Prints: <%= @image.number_prints %></p>
-			<p>Owner: <%= @image.art_owner_id %></p>
-			<p>Asking Price: <%= @image.original_value %></p><br><br>
+			<p>Title: <%= @piece.title %></p>
+			<p>Artist: <%= @piece.artist_id %></p>
+			<p>Genre: <%= @piece.genre %></p>
+			<p>Description: <%= @piece.art_description %></p>
+			<p>Prints: <%= @piece.number_prints %></p>
+			<p>Owner: <%= @piece.art_owner_id %></p>
+			<p>Asking Price: <%= @piece.original_value %></p><br><br>
 			<br>
 			<p>
 				<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
@@ -19,7 +18,7 @@
     				<input type="hidden" name="business" value="quintont@umich.edu">
     				<input type="hidden" name="item_name" value="Donation">
     				<input type="hidden" name="item_number" value="1">
-    				<input type="hidden" name="amount" value="15.00">
+    				<input type="hidden" name="amount" value=<%= @piece.original_value %>>
     				<input type="hidden" name="no_shipping" value="0">
     				<input type="hidden" name="no_note" value="1">
     				<input type="hidden" name="currency_code" value="USD">
@@ -30,12 +29,7 @@
 				</form>
 			</p>
 		</div>
-
 	<div class="col-md-9">
-		
-			<%= image_tag asset_path @image.image_url%>
-
+			<%= image_tag asset_path @piece.image_url %>
 	</div>
 </div>
-
-

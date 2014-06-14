@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @gallery_value = current_user.gallery_value 
+    @gallery_value = current_user.gallery_value
+    @pieces = current_user.owned_pieces
   end
 end
