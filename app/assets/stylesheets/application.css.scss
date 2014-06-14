@@ -106,7 +106,7 @@ nav {
 }
 
 .footer {
-	background-color: rgb(223, 223, 223);
+	background-color: rgba(219, 219, 219, .7);
 	clear: both;
 	text-align: center;
 	text-transform: uppercase;
@@ -137,6 +137,26 @@ p {
 	text-align: left;
 
 }
+.modal-content {
+	background: transparent;
+}
+
+.modal-body {
+	background: rgba(219, 219, 219, .8);
+	font-family: 'EB Garamond', serif;
+	font-size: 1.7;
+}
+.modal-header {
+	background: rgba(90, 198, 174, .8);
+	font-family: 'EB Garamond', serif;
+}
+.modal-footer {
+	background: rgba(90, 198, 174, .8);
+	font-family: 'EB Garamond', serif;
+	margin-top: 0px;
+}
+
+
 
 /*.modalDialog {
 	position: fixed;

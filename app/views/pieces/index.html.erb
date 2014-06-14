@@ -4,7 +4,7 @@
     <div class="header">
       <nav>
         <div class="nav-item main" style="font-size:350%">
-          Simba
+          Avenu
         </div>
         <% if current_user %>
           <div class="nav-item">
@@ -41,9 +41,9 @@
             <figure class="box col3">
               <%= link_to (image_tag asset_path i.image_url), "pieces/#{i.id}" %>
               <figcaption>
-                <p class = "art_title"><%= i.title %></p>
-               <!--  <p class = "artist_name"></p> -->
-                $<p><%= i.original_value %></p>
+                Title of Art<p class = "art_title"><%= i.title %></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p><%= i.original_value %></p>
               </figcaption>
             </figure>
           <% end %>  

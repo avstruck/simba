@@ -8,7 +8,7 @@
 
 		<% if (user_signed_in? && (current_user.id == params[:id].to_i)) %>
 		  <a href="#myModal" data-toggle="modal">Account</a>
-		  <p>The total price of your gallery is <%= @gallery_value %>.<p>
+		  <p>The total value of your gallery is <%= @gallery_value %>.<p>
 		<% end %>
 
 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
