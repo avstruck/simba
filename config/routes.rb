@@ -13,12 +13,7 @@ Rails.application.routes.draw do
   put 'users/:id' => 'users#update'
   
   #to upload (create) and change (update) art pieces
-  get 'pieces/new' => 'pieces#new'
-  post 'pieces' => 'pieces#create'
-  get 'pieces/:id/edit' => 'pieces#edit'
-  put 'pieces/:id' => 'pieces#update'
-  delete 'pieces/:id' => 'pieces#destroy'
-
+  resources :pieces, only: [:create, :new, :update, :edit, :destroy]
 
   #----------Functions----------
 
@@ -27,13 +22,11 @@ Rails.application.routes.draw do
   get 'pieces/:id' => 'pieces#show'
 
   #to buy a piece of art
-  get 'purchases/new' => 'purchases#new'
-  post 'purchases' => 'purchases#create'
-
+  resources :purchases, only: [:create, :new]
+  
   #to see a user's profile, which includes bio, gallery/collection
   get 'users/:id' => 'users#show'
   get 'galleries/:id' => 'galleries#show'
-
 
 
 
