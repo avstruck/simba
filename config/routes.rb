@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
   #to browse all photos and one specific piece
   root 'pieces#index'
+  get 'pieces' => 'pieces#index'
   get 'pieces/:id' => 'pieces#show'
 
   #to buy a piece of art

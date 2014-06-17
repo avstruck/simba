@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
   <body>
+    
+
+
+<!-- THE NAV BAR -->
     <div class="header">
       <nav>
         <div class="col-md-4 .col-xs-4 gray nav-bar">
           <div class="nav-item"><a href="/">Price</a></div>
           <div class="nav-item"><a href="/">Genre</a></div>
-          <div class="nav-item"><a href="/">Search</a></div>
+          <div class="nav-item" id="search_bar">
+            
+            <%= form_tag root_path, :method => 'get', :id => "pieces_search" do %>
+              <p>
+                <%= text_field_tag params[:q] %>
+                <%= submit_tag "Search", :title => nil %>
+             </p>
+          <%end%>
+          </div>
         </div>
         <div class="nav-item main col-md-4 .col-xs-4">
           <%= link_to "avinu", root_path %>
@@ -24,13 +36,34 @@
     </div>
   <br><br><br> 
 
-  <div class="browse_content">
 
+
+<!-- THE FIRST VIEW -->
+  <div id="first_view">
+      <div id="gold_frame">
+          <%= image_tag asset_path "gold_frame3.png"%>
+      </div>
+  </div>
+
+
+
+ <!-- SCROLL DOWN LINK -->
+ <div id="scroll_down_link_container">
+    <a href="#browse-content" style="color:black; font-size:26px;">Browse Art
+      <%= image_tag asset_path "down_arrow.png"%> 
+    </a>
+ </div>
+
+
+
+ <!-- BROWSING -->
+  <div class="browse_content" id="browse-content">
+        <br><br><br>
         <div id="masonry-container" class="transitions-enabled infinite-scroll centered fluid  clearfix">
           <% @pieces.each do |i| %>
             <figure class="box col3">
               <%= link_to (image_tag asset_path i.image_url), "pieces/#{i.id}" %>
-              <figcaption>
+              <figcaption class="figcaption">
                 Title of Art<p class = "art_title"><%= i.title %></p>
                 Salvador Dali<!--  <p class = "artist_name"></p> -->
                 $5000<p><%= i.original_value %></p>
@@ -42,6 +75,7 @@
   </div>
 
 
+<!-- MODAL SIGN IN -->
   <div class="modal fade" id="sign_in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -70,6 +104,9 @@
     </div>
   </div>
 
+
+
+<!-- MODAL SIGN UP -->
   <div class="modal fade" id="sign_up" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
