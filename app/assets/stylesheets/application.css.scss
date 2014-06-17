@@ -30,9 +30,8 @@
 
 
 body {
-	background-image: url("/assets/paper.png");
 	background-color: #000;
-	z-index: 1;
+	font-family: 'Merriweather', serif;
 }	
 
 /*/* Infinite Scroll loader */
@@ -51,38 +50,25 @@ body {
           border-radius: 10px;
 }*/
 
-
-img {
-	border: solid;
-	border-width: 1px;
-	border-color: #7F7F7F;
-}
-
 .footer {
 	background-color: rgba(219, 219, 219, .7);
 	clear: both;
 	text-align: center;
-	text-transform: uppercase;
-	color: #FFF;
+	text-transform: capitalize;
 	height: 100px;
+	font-family: "Source Sans Pro", sans serif;
 
 	div {
 		padding-top: 40px;
 	}
 }
 
-.browse_content {
-	font-family: 'EB Garamond', serif;
-}
-
 .art_title {
-
 	font-style: italic;
 }
 .artist_name {
 	font-style: bold;
 }
-
 
 p {
 	font-size: 16px;

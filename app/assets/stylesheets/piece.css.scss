@@ -88,7 +88,8 @@
 
 img {
 
-	max-width: 50%;
+	width: 80%;
+  min-width: 500px;
 	height: auto;
 	display: block;
     margin-left: auto;
@@ -100,7 +101,17 @@ img {
 	font-size: 20px;
 }
 
+.art_info {
+  padding: 50px;
+  position: fixed;
+  width: 300px;
+  font-family: 'Source Sans Pro', sans serif;
 
+
+  span {
+    font-family: 'Merriweather', serif;
+  }
+}
 
 
 
