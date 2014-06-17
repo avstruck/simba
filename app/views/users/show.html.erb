@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html>
   <body>
-		<h4>This is your profile with your bio & gallarayyy</h4>
-
-		<h1><%= @user.username %></h1>
-		<p><%= @user.bio %><p>
-
-		<% if (user_signed_in? && (current_user.id == params[:id].to_i)) %>
-		  <a href="#myModal" data-toggle="modal">Account</a>
-		  <p>The total value of your gallery is <%= @gallery_value %>.<p>
-		<% end %>
-
 		<div class=user_profile>
 			<h1><%= @user.username %></h1>
 			<p><%= @user.bio %><p>
@@ -24,7 +14,7 @@
 	        <div id="masonry-container" class="transitions-enabled infinite-scroll centered fluid  clearfix">
 	          <% @pieces.each do |i| %>
 	            <figure class="box col3">
-	              <%= link_to (image_tag asset_path i.image_url), "pieces/#{i.id}" %>
+	              <%= link_to (image_tag asset_path i.image_url), i %>
 	              <figcaption>
 	                <p class = "art_title"><%= i.title %></p>
 	                <p class = "artist_name"><%= i.artist.username%></p>

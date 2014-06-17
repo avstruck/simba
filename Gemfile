@@ -11,11 +11,13 @@ gem 'devise'
 gem 'paperclip', '~> 4.1.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
+
 # Use POSTGRESQL as the database for Active Record
 
 gem 'pg'
 
  #WHEN YOU BUNDLE INSTALL, COMMAND IS: "BUNDLE --WITHOUT PRODUCTION"
+
 
 
 # Use SCSS for stylesheets
