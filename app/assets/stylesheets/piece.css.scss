@@ -1,6 +1,8 @@
 
 #masonry-container {
-  padding: 5px;
+  padding-left: 26px;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 20px;
   border-radius: 5px;
   clear: both;
@@ -14,8 +16,6 @@
 
 	max-width: 300px;
 	background-color: transparent;
-
-	
 
 }
 
@@ -50,10 +50,67 @@ img {
     vertical-align: middle;
 }
 .modal-body {
-	font-size: 20px;
+	font-size: 16px;
 }
 
+#logo>a:hover {
+    text-decoration: none;
+    color: #3CB5B5;
+}
 
+#sign_in_and_sign_out:hover {
+    text-decoration: none;
+    color: #3CB5B5;
+}
+
+#sign_up_and_username:hover {
+    text-decoration: none;
+    color: #3CB5B5;
+}
+
+#price_filter:hover {
+    text-decoration: none;
+    color: #3CB5B5;
+}
+
+#genre_filter:hover {
+    text-decoration: none;
+    color: #3CB5B5;
+}
+
+#search_filter:hover {
+    text-decoration: none;
+    color: #3CB5B5;
+}
+
+input {
+  background-color: rgba(219, 219, 219, .7);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+}
+
+#first_view {
+}
+
+#browse-content {
+}
+
+#gold_frame {
+  border: none;
+  height: 635px;
+  z-index:-1;
+  background-color: white;
+  background-size: 78%;
+  margin-bottom: -18px;
+}
+
+#gold_frame>img {
+  min-width: 61%;
+  background-color:white;
+  background:url(monet_flowers.jpg) no-repeat;
+  background-size: 86%;
+  background-position: center;
+
+}
 
 
 
