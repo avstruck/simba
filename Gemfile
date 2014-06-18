@@ -14,7 +14,7 @@ gem 'pg'
 
  #WHEN YOU BUNDLE INSTALL, COMMAND IS: "BUNDLE --WITHOUT PRODUCTION"
 
-
+gem 'pry', group: :development
 
 
 # Use SCSS for stylesheets
