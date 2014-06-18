@@ -107,9 +107,9 @@ $(function(){
 // });
 
 
-//=SMOOTH SCROLLING CODE
+// SMOOTH SCROLLING CODE
 $(function() {
-$('a[href*=#]:not([href=#])').click(function() {
+$('#scroll_down_link').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
         || location.hostname == this.hostname) {
 

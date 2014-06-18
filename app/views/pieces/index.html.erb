@@ -4,53 +4,80 @@
     
 
 
-<!-- THE NAV BAR -->
-    <div class="header">
-      <nav>
-        <div class="col-md-4 .col-xs-4 gray nav-bar">
-          <div class="nav-item"><a href="/">Price</a></div>
-          <div class="nav-item"><a href="/">Genre</a></div>
-          <div class="nav-item" id="search_bar">
-            <%= form_tag root_path, :method => 'get', :id => "pieces_search" do %>
-              <p>
-                <%= text_field_tag params[:q] %>
-                <%= submit_tag "Search", :title => nil %>
-              </p>
-            <%end%>
+<!--------------------------------------THE NAV BAR-------------------------------------->
+  <div class="header container-fluid">
+    <div class="row">
+        <nav>
+          
+  <!-- NAME / LOGO -->
+        <div class="nav-item main col-md-3" id="logo">
+          <%= link_to "Artshow", root_path %>
+        </div>
+
+
+        <div class="col-md-1">
+        </div>
+
+
+  <!--  SEARCH BAR -->
+          <div class="nav-bar">
+              <div class="nav-item col-md-3" id="search_bar_div">
+                
+                    <%= form_tag root_path, :method => 'get' do %>
+                      <p>
+                        <%= search_field_tag 'pieces_search_box', params[:q], :placeholder =>"Search..."%>
+                        <%= submit_tag "", :title => nil, :id => "pieces_search_button" %>
+                      </p>
+                    <%end%>
+
+              </div>
+          </div>      
+
+
+  <!-- PRICE / GENRE  -->  
+          <div class="nav-bar">
+              <div class="nav-item col-md-1" id="price_filter"><a href="/">Price</a>
+              </div>
+              <div class="nav-item col-md-1" id="genre_filter"><a href="/">Genre</a>
+              </div>
           </div>
-        </div>
-        <div class="nav-item main col-md-4 .col-xs-4">
-          <%= link_to "avinu", root_path %>
-        </div>
-        <div class="col-md-4 .col-xs-4 gray nav-bar">
+
+
+  <!-- SIGN IN / SIGN UP / USERNAME / LOGOUT -->
+        <div class="nav-bar">
           <% if current_user %>
-            <div class="nav-item right"><%= link_to "Sign out", destroy_user_session_path, method: :delete%></div>
-            <div class="nav-item right"><%= link_to current_user.username, "/users/#{current_user.id}"%></div>
+            <div class="nav-item col-md-1 right" id="sign_out_link"><%= link_to "Sign out", destroy_user_session_path, method: :delete%></div>
+            <div class="nav-item col-md-1 right" id="username_link"><%= link_to current_user.username, "/users/#{current_user.id}"%></div>
           <% else %>
-            <div class="nav-item right"><a href="#sign_in" data-toggle="modal">Sign in</a></div>
-            <div class="nav-item right"><a href="#sign_up" data-toggle="modal">Sign up</a></div>
+            <div class="nav-item col-md-1 right" id="sign_in_link" ><a href="#sign_in" data-toggle="modal">Sign in</a></div>
+            <div class="nav-item col-md-1 right" id="sign_up_link"><a href="#sign_up" data-toggle="modal">Sign up</a></div>
             <% end %>
         </div>
       </nav>
     </div>
-  <br><br><br> 
+  </div>
+
+  <br><br><br><br>
+<!------------------------------------------------------------------------------------------------->
+
+
 
 
 
 <!-- THE FIRST VIEW -->
-  <div id="first_view">
-      <div id="gold_frame">
-
-          <%= image_tag asset_path "gold_frame5.png" class:"show_image"%>
-      </div>
-  </div>
+    <div id="first_view">
+        <div id="gold_frame">
+          <br>
+            <%= image_tag asset_path "gold_frame5.png", class:"show_image"%>
+        </div>
+    </div>
 
 
 
  <!-- SCROLL DOWN LINK -->
  <div id="scroll_down_link_container">
-    <a href="#browse-content" style="color:black; font-size:26px;">Browse Art
-      <%= image_tag asset_path "down_arrow.png"%> 
+    <a href="#browse-content" id="scroll_down_link" style="color:black; font-size:26px;">Browse Art
+      <%= image_tag asset_path "down_arrow.png", id:"down_arrow"%> 
     </a>
  </div>
 
@@ -59,7 +86,7 @@
  <!-- BROWSING -->
   <div class="browse_content" id="browse-content">
         <br><br><br>
-        <div id="masonry-container" class="transitions-enabled infinite-scroll centered fluid  clearfix">
+        <div id="masonry-container" class=" infinite-scroll centered fluid  clearfix">
           <% @pieces.each do |i| %>
             <figure class="box col3">
               <%= link_to (image_tag asset_path i.image_url), "pieces/#{i.id}" %>

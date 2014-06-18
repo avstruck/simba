@@ -44,15 +44,15 @@ ActiveRecord::Schema.define(version: 20140617102620) do
   end
 
   create_table "purchases", force: true do |t|
+    t.datetime "purchase_date"
+    t.string   "purchase_type"
     t.integer  "quantity"
     t.float    "purchase_price"
     t.integer  "initiator_id"
+    t.integer  "acceptor_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "piece_id"
-    t.integer  "acceptor_id"
-    t.string   "purchase_type"
-    t.datetime "purchase_date"
   end
 
   create_table "users", force: true do |t|
