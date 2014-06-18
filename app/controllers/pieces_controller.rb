@@ -8,7 +8,7 @@ class PiecesController < ApplicationController
 
   def create
     @new_piece = Piece.create( piece_params )
-    @new_piece.art_owner_id = current_user.id
+    @new_piece.update_attributes(artist_id: current_user.id, art_owner_id: current_user.id, artist_name: current_user.username)
 
     redirect_to "/pieces/#{@new_piece.id}"
 
