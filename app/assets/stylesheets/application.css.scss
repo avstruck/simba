@@ -106,11 +106,66 @@ p {
 	font-size: 16px;
 }
 
-.search_bar {
-	background-color: #fff;
-	margin-top: 8px;
-	border: solid;
-	border-color: black;
+
+
+
+
+/*////////NAV ITEMS///////////////*/
+#logo {
+	margin-top: 9px;
+}
+
+#price_filter {
+	margin-top: 18px;
+}
+
+#genre_filter {
+	margin-top: 18px;
+}
+
+#sign_up_link {
+	margin-top: 18px;
+}
+
+#sign_in_link {
+	margin-top: 18px;
+}
+
+#sign_out_link {
+	margin-top: 18px;
+}
+
+#username_link {
+	margin-top: 18px;
+}
+
+#search_bar_div {
+}
+
+
+
+/*////////SEARCH BAR///////////////*/
+
+
+#pieces_search_box {
+	border-radius: 5px 5px;
+	margin-top: 10px;
+	padding-top: 9px	;
+}
+
+#pieces_search_button {
+	border-radius: 5px 5px;
+	background-image: url(magnifying_glass.png);
+	background-size: 100%;
+	background-position: center;
+	width: 25px;
+	height: 25px;
+	vertical-align: middle;
+	margin-left: -35px;
+	margin-bottom: 9px;
+}
+
+#pieces_search_box:focus {
 }
 
 
@@ -121,7 +176,21 @@ p {
   text-decoration: none;
   color:black;
   text-align: center;
-  /*background-color: rgba(219, 219, 219, .9);*/
+  max-width: 10%;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+ /* background-color: rgba(219, 219, 219, .9);*/
+
+}
+
+.nav_item {
+	padding-top: 9px;
+}
+
+
+#down_arrow {
+	border:solid;
 }
 
 #scroll_down_link_container>a:hover {
