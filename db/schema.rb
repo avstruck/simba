@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140617102620) do
+ActiveRecord::Schema.define(version: 20140618172711) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,11 @@ ActiveRecord::Schema.define(version: 20140617102620) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.float    "print_value"
+    t.string   "artist_name"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
   end
 
   create_table "prints", force: true do |t|
@@ -44,15 +49,15 @@ ActiveRecord::Schema.define(version: 20140617102620) do
   end
 
   create_table "purchases", force: true do |t|
+    t.datetime "purchase_date"
+    t.string   "purchase_type"
     t.integer  "quantity"
     t.float    "purchase_price"
     t.integer  "initiator_id"
+    t.integer  "acceptor_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "piece_id"
-    t.integer  "acceptor_id"
-    t.string   "purchase_type"
-    t.datetime "purchase_date"
   end
 
   create_table "users", force: true do |t|
