@@ -1,9 +1,5 @@
 source 'https://rubygems.org'
 
-
-
-
-
 gem 'will_paginate', '~> 3.0.5'
 gem 'paypal-sdk-rest'
 gem 'masonry-rails'
@@ -17,6 +13,7 @@ gem 'rails', '4.1.1'
 gem 'pg'
 
  #WHEN YOU BUNDLE INSTALL, COMMAND IS: "BUNDLE --WITHOUT PRODUCTION"
+
 
 
 

@@ -18,3 +18,7 @@ image_array.each do |name|
   Piece.create!(image_url: name, artist_id: 10, art_owner_id: 10, title: name, genre: "modern",
    original_value: 10.0, number_prints: 0, art_description: "Very pretty painting", print_value: 80)
 end
+
+["jane", "kate", "laura", "mike", "nellie", "ori", "paul", "quinton"].each do |name|
+	User.create!(email: name + "@gmail.com", username: name, password: 12345678)
+end

@@ -6,7 +6,9 @@
         <div class="col-md-4 .col-xs-4 gray nav-bar">
           <a href="/">Browse</a>
           <a href="/">Search Gallery</a>
-          <a href="/">Upload Art</a>
+          <a href="/pieces/new" class="btn btn-primary btn-md active" role="button">
+            Upload Art
+          </a>
         </div>
         <div class="nav-item main col-md-4 .col-xs-4">
 	        <%= @user.username %>
@@ -37,7 +39,14 @@
 	        <h4 class="gallery_label">Original Works</h4>
 	        <hr>
 	        <div id="masonry-container" class="transitions-enabled infinite-scroll centered fluid  clearfix">
-	          <% @pieces.each do |i| %>
+	          
+            <%= while true do %>
+              <%= if @piece.art_owner_id == current_user.id%>
+                <%= image_tag asset_path @piece.avatar %>
+              <% end %>
+            <% end %>
+
+            <% @pieces.each do |i| %>
 	            <figure class="box col3">
 	              <%= link_to (image_tag asset_path i.image_url), i %>
 	              <figcaption>
@@ -49,10 +58,23 @@
 	          <% end %>  
 	        </div>
 	        <h4 class="gallery_label">Prints</h4>
-
 	        <hr>
-	        
+
+	        <div id="masonry-container" class="transitions-enabled infinite-scroll centered fluid  clearfix">
+           <% @prints.each do |print| %>
+            <% piece = print.piece %>
+             <figure class="box col3">
+               <%= link_to (image_tag asset_path piece.image_url), piece %>
+               <figcaption>
+                 <p class = "art_title"><%= piece.title %></p>
+                 <p class = "artist_name"><%= piece.artist.username%></p>
+                 $<p><%= piece.original_value %></p>
+               </figcaption>
+             </figure>
+           <% end %>  
+         </div>
 	</div>
+
 
 
   <div class="modal fade" id="sign_in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -134,7 +156,7 @@
 		
 		
 
-		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		  <div class="modal-dialog">
 		    <div class="modal-content">
 		      <div class="modal-header">

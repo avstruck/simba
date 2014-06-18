@@ -7,6 +7,11 @@ class PiecesController < ApplicationController
   end
 
   def create
+    @new_piece = Piece.create( piece_params )
+    @new_piece.art_owner_id = current_user.id
+
+    redirect_to "/pieces/#{@new_piece.id}"
+
   end
 
   def edit
@@ -26,4 +31,15 @@ class PiecesController < ApplicationController
   def show
     @piece = Piece.find(params[:id])
   end
+
+  private
+
+  def piece_params
+    params.require(:piece).permit(:avatar, :title, :genre, :image_url, :artist_id, :original_value, 
+      :art_owner_id, :copyright_owner_id, :number_prints, :art_description, :ownership_type, :created_at,
+      :updated_at, :print_value, :artist_name)
+  end
+
+
+
 end 
