@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140610101135) do
+ActiveRecord::Schema.define(version: 20140617102620) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,17 +35,24 @@ ActiveRecord::Schema.define(version: 20140610101135) do
     t.string   "ownership_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "print_value"
+  end
+
+  create_table "prints", force: true do |t|
+    t.integer "owner_id"
+    t.integer "piece_id"
   end
 
   create_table "purchases", force: true do |t|
-    t.datetime "purchase_date"
-    t.string   "purchase_type"
     t.integer  "quantity"
     t.float    "purchase_price"
     t.integer  "initiator_id"
-    t.integer  "acceptor_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "piece_id"
+    t.integer  "acceptor_id"
+    t.string   "purchase_type"
+    t.datetime "purchase_date"
   end
 
   create_table "users", force: true do |t|
@@ -66,6 +73,8 @@ ActiveRecord::Schema.define(version: 20140610101135) do
     t.text     "address"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "first_name"
+    t.string   "last_name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

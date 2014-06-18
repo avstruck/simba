@@ -1,11 +1,6 @@
 class Purchase < ActiveRecord::Base
 	belongs_to :initator, class_name: "User"
 	belongs_to :acceptor, class_name: "User"
-	belongs_to :piece
+	belongs_to :print
 
-
-	def charge(token)
-		
-		
-	end
 end

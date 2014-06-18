@@ -1,6 +1,5 @@
 class Piece < ActiveRecord::Base
-	belongs_to :gallery
-	has_one :purchase
+	has_many :prints
 
 	belongs_to :artist, class_name: "User"
 	belongs_to :art_owner, class_name: "User"

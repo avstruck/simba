@@ -71,6 +71,7 @@
 .masonry-brick {
 	max-width: 300px;
 	background-color: transparent;
+}
 
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
@@ -87,11 +88,23 @@
 	padding-left: 15px;
 }
 
-img {
+.show_img {
+
 
 	max-width: 100%;
 	height: auto;
 	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+}
+
+img {
+
+  width: 85%;
+  min-width: 500px;
+  height: auto;
+  display: block;
     margin-left: auto;
     margin-right: auto;
     vertical-align: middle;
@@ -104,6 +117,19 @@ img {
 #logo>a:hover {
     text-decoration: none;
     color: #3CB5B5;
+}
+
+
+.art_info {
+  padding: 50px;
+  position: fixed;
+  width: 300px;
+  font-family: 'Source Sans Pro', sans serif;
+
+
+  span {
+    font-family: 'Merriweather', serif;
+  }
 }
 
 #sign_in_and_sign_out:hover {

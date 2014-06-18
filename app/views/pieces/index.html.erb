@@ -11,13 +11,12 @@
           <div class="nav-item"><a href="/">Price</a></div>
           <div class="nav-item"><a href="/">Genre</a></div>
           <div class="nav-item" id="search_bar">
-            
             <%= form_tag root_path, :method => 'get', :id => "pieces_search" do %>
               <p>
                 <%= text_field_tag params[:q] %>
                 <%= submit_tag "Search", :title => nil %>
-             </p>
-          <%end%>
+              </p>
+            <%end%>
           </div>
         </div>
         <div class="nav-item main col-md-4 .col-xs-4">
@@ -41,7 +40,8 @@
 <!-- THE FIRST VIEW -->
   <div id="first_view">
       <div id="gold_frame">
-          <%= image_tag asset_path "gold_frame5.png"%>
+
+          <%= image_tag asset_path "gold_frame5.png" class:"show_image"%>
       </div>
   </div>
 
@@ -73,14 +73,6 @@
         </div>
 
   </div>
-
-
-
-<!-- FOOTER -->
-  <div class="footer">
-    <div>Copyright © Simba</div>
-  </div>
-
 
 
 <!-- MODAL SIGN IN -->
