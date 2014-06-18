@@ -25,6 +25,18 @@ class User < ActiveRecord::Base
     # self.pieces.inject(&:+)
   end
 
+  def unique_prints
+    prints = []
+      ids = []
+      self.prints.each { |print|
+        if !ids.include?(print.piece_id)
+          ids << print.piece_id
+          prints << print
+        end
+      }
+    prints
+  end
+
 end
 
 

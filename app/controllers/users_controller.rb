@@ -10,6 +10,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @pieces = @user.owned_pieces.uniq
-    @prints = @user.prints.uniq
+    @prints = @user.unique_prints
+      
+      
   end
 end
