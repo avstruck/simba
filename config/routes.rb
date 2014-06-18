@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   
   #to upload (create) and change (update) art pieces
   resources :pieces, only: [:create, :new, :update, :edit, :destroy]
+  get 'pieces/new' => 'pieces#new'
+  post 'pieces/create' => 'pieces#create'
 
   #----------Functions----------
 

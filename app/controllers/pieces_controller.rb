@@ -7,6 +7,10 @@ class PiecesController < ApplicationController
   end
 
   def create
+    @new_piece = Piece.create( piece_params )
+
+    redirect_to '/'
+
   end
 
   def edit
@@ -26,4 +30,13 @@ class PiecesController < ApplicationController
   def show
     @piece = Piece.find(params[:id])
   end
+
+  private
+
+  def piece_params
+    params.require(:piece).permit(:avatar)
+  end
+
+
+
 end 
