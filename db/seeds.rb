@@ -11,8 +11,10 @@
 	# 	image_tag asset_path i
 	# end
 
+
 image_array = ["stream.jpg", "arch_sketch.jpg", "bride.jpg", "court_house.jpg", "cover-st-anthonys-church.jpg", "dark_clouds.jpg", "sunflower.jpg", "trees.jpg", "white_horses.jpg", "elephant.jpg", "desert.jpg", "gazebo.jpg", "eye.jpg", "Howard_Fogg_Art_Train_Painting_SHHC008(1).jpg", "white_horses.jpg", "lakehouse.jpg", "farm_house.jpg", "sunset.jpg", "waves.jpg", "watermelon.jpg"]
 
 image_array.each do |name|
-  Piece.create!(image_url: name, artist_id: 10, art_owner_id: 10, original_value: 10)
+  Piece.create!(image_url: name, artist_id: 10, art_owner_id: 10, title: name, genre: "modern",
+   original_value: 10.0, number_prints: 0, art_description: "Very pretty painting", print_value: 80)
 end

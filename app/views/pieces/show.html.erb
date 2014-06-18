@@ -1,35 +1,30 @@
-<!-- <div class="show_header">
-	<h4>Welcome to Viewer!</h4>
-</div> -->
-<br><br>
+<br>
 <div class="row" style="margin-top: -40px;">
-	<div class="col-md-3">
-			<p>Title: <%= @piece.title %></p>
-			<p>Artist: <%= @piece.artist_id %></p>
-			<p>Genre: <%= @piece.genre %></p>
-			<p>Description: <%= @piece.art_description %></p>
-			<p>Prints: <%= @piece.number_prints %></p>
-			<p>Owner: <%= @piece.art_owner_id %></p>
-			<p>Asking Price: <%= @piece.original_value %></p><br><br>
-			<br>
-			<p>
-				<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-    				<input type="hidden" name="cmd" value="_xclick">
-    				<input type="hidden" name="business" value="quintont@umich.edu">
-    				<input type="hidden" name="item_name" value="Donation">
-    				<input type="hidden" name="item_number" value="1">
-    				<input type="hidden" name="amount" value=<%= @piece.original_value %>>
-    				<input type="hidden" name="no_shipping" value="0">
-    				<input type="hidden" name="no_note" value="1">
-    				<input type="hidden" name="currency_code" value="USD">
-    				<input type="hidden" name="lc" value="AU">
-    				<input type="hidden" name="bn" value="PP-BuyNowBF">
-    				<input type="image" src="https://www.paypal.com/en_AU/i/btn/btn_buynow_LG.gif" border="0" name="	submit" alt=	"PayPal - The safer, easier way to pay online.">
-    				<img alt="" border="0" src="https://www.paypal.com/en_AU/i/scr/pixel.gif" width="1" height="1">
-				</form>
-			</p>
-		</div>
-	<div class="col-md-9">
-			<%= image_tag asset_path @piece.image_url %>
-	</div>
+		<div class="art_info gray">
+
+			<p><span>Title:</span> <%= @piece.title %></p>
+			<p><span>Artist:</span> <%= @piece.artist_id %></p>
+			<p><span>Genre:</span> <%= @piece.genre %></p>
+			<p><span>Description:</span> <%= @piece.art_description %></p>
+			<p><span>Prints:</span> <%= @piece.number_prints %></p>
+			<p><span>Owner:</span> <%= @piece.art_owner_id %></p>
+			<p><span>Asking Price:</span> <%= @piece.original_value %></p>
+			<br><br>
+
+		    <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
+			<form action="/purchases" method="POST">
+			  <script
+			    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+			    data-key="pk_test_S3JqCMGRfDD5S46sEYXsqKKZ"
+			    data-image="/square-image.png"
+			    data-name="Simba"
+			    data-description="2 widgets ($20.00)"
+			    data-amount=<%= @piece.original_value.to_i %>>
+			  </script>
+			  <input type="hidden" name="piece_id" value=<%= @piece.id %>>
+			</form>
+		</div>		
+
+		<%= image_tag asset_path @piece.image_url %>
+
 </div>

@@ -3,14 +3,21 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .user_profile {
-	text-align: center
-
+	text-align: center;
+	font-family: "Source Sans Pro", sans serif;
+	font-size: 14px
 }
 
 hr {
 	background-color: #000;
-	height: 8px;
+	height: 2px;
 	text-align: center;
-	width: 90%;
+	width: 100%;
+	margin: 0;
+}
+
+.gallery_label {
+	font-family: "Merriweather", serif;
+	margin: 0;
 }
 

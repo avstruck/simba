@@ -1,6 +1,5 @@
 class Piece < ActiveRecord::Base
-	belongs_to :gallery
-	has_one :purchase
+	has_many :prints
 
 	belongs_to :artist, class_name: "User"
 	belongs_to :art_owner, class_name: "User"
@@ -9,4 +8,13 @@ class Piece < ActiveRecord::Base
 	attr_accessible :image
   	has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
   	validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+
+	def self.search(query)
+		if query
+			Piece.where("title = LIKE'%#{query}%'")
+		else
+			Piece.all
+		end
+	end
+	
 end

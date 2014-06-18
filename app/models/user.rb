@@ -1,9 +1,9 @@
 class User < ActiveRecord::Base
-  has_one :gallery
   has_many :art_pieces, :class_name => "Piece", :foreign_key => :artist_id
   has_many :owned_pieces, :class_name => "Piece", :foreign_key => :art_owner_id
   has_many :copyrights, :class_name => "Piece", :foreign_key => :copyright_owner_id
 
+  has_many :prints, :foreign_key => :owner_id
 
   has_many :buy_purchases, class_name: "Purchase", foreign_key: :initiator_id
   has_many :sell_purchases, class_name: "Purchase", foreign_key: :acceptor_id

@@ -20,9 +20,10 @@ class PiecesController < ApplicationController
 
   def index
     @pieces = Piece.all
+    @pieces = Piece.search(params[:q])
+    # @pieces = Piece.new
   end
-
   def show
     @piece = Piece.find(params[:id])
   end
-end
+end 

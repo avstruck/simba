@@ -13,7 +13,6 @@
 
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 
 //= require masonry/jquery.masonry
 //= require masonry/jquery.event-drag
@@ -27,57 +26,54 @@
 
 //= require_tree .
 
+
+
+
+
+
+
 $(function(){
 	$('#container').masonry({
 	  itemSelector: '.box',
-	  // columnWidth: 100
+	  // columnWidth: 375
 	});
-});
-
-$(function(){  
+ 
   $('#masonry-container').masonry({
     itemSelector: '.box',
-    columnWidth: 200,
+    columnWidth: 375,
     isAnimated: !Modernizr.csstransitions,
     isFitWidth: true
   });
-});
-
-$('#masonry-container').masonry({
-  itemSelector: '.box',
-  // set columnWidth a fraction of the container width
-  columnWidth: function( containerWidth ) {
-    return containerWidth / 5;
-  }
-});
-
-$(function(){
 
   $('#masonry-container').masonry({
     itemSelector: '.box',
-    columnWidth: 100,
+    // set columnWidth a fraction of the container width
+    // columnWidth: function( containerWidth ) {
+    //   return containerWidth / 5;
+    // }
+  });
+
+
+  $('#masonry-container').masonry({
+    itemSelector: '.box',
+    // columnWidth: 375,
     isAnimated: !Modernizr.csstransitions,
     isRTL: true
   });
-});
-
-$(function(){
 
   $('#masonry-container').masonry({
     itemSelector: '.box',
-    columnWidth: 100,
-    gutterWidth: 40
+    // columnWidth: 375,
+    gutterWidth: 0
   });
-});
 
-$(function(){
 
   var $container = $('#masonry-container');
 
   $container.imagesLoaded(function(){
     $container.masonry({
       itemSelector: '.box',
-      columnWidth: 100
+      // columnWidth: 375
     });
   });
 
@@ -100,6 +96,31 @@ $(function(){
         $newElems.animate({ opacity: 1 });
         $container.masonry( 'appended', $newElems, true ); 
       });
+    });
+  
+});
+
+// $("#pieces_search input").keyup(function() {
+//     $.get($("#pieces_search").attr("action"), $("#pieces_search").serialize(), null, "script");
+//     return false;
+//   });
+// });
+
+
+//=SMOOTH SCROLLING CODE
+$(function() {
+$('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+        || location.hostname == this.hostname) {
+
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+           if (target.length) {
+             $('html,body').animate({
+                 scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
     }
-  );
+});
 });
