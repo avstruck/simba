@@ -41,7 +41,7 @@
 	        <div id="masonry-container" class="transitions-enabled infinite-scroll centered fluid  clearfix">    
               <% @pieces.each do |piece|  %>
   	            <figure class="box col3">
-                   <%= image_tag asset_path piece.avatar %>
+                   <%= link_to (image_tag asset_path piece.avatar), "/pieces/#{piece.id}" %>
       	              <figcaption>
       	                <p class = "art_title"><%= piece.title %></p>
       	                <p class = "artist_name"><%= piece.artist_name %></p>
