@@ -7,7 +7,7 @@
   height: 40px;
   min-width: 600px;
   background-color: rgba(255,255,255,.9);;
-  height: 50px;
+  height: 70px;
 
   nav {
     height: 100%;
@@ -36,7 +36,7 @@
 
   a {
     z-index: 100;
-    color: #67666A;
+    color: black;
     text-decoration: none;
   }
 
@@ -107,6 +107,8 @@ img {
 
 .modal-body {
 	font-size: 16px;
+  font-family:'EB Garamond', serif;
+
 }
 
 #logo>a:hover {
@@ -119,7 +121,7 @@ img {
   padding: 50px;
   position: fixed;
   width: 300px;
-  font-family: 'Source Sans Pro', sans serif;
+  font-family:'EB Garamond', serif;
 
 
   span {
@@ -134,11 +136,13 @@ input {
 
 #first_view {
   background: url(grunge_wall.png);
-  height: 607px;
-  margin-top: -60px;
+  height: 675px;
+  margin-top: -45px;
 }
 
 #browse-content {
+
+  margin-top: 100px;
 }
 
 #gold_frame {
@@ -150,7 +154,7 @@ input {
   margin-bottom: -18px;
   margin-right: auto;
   margin-left: auto;
-  margin-top:25px;
+  margin-top:30px;
 }
 
 #gold_frame>img {
