@@ -6,15 +6,11 @@
   z-index: 100;
   height: 40px;
   min-width: 600px;
-  background-color: rgba(41,203,171,.8);;
+  background-color: rgba(255,255,255,.9);;
   height: 50px;
 
   nav {
     height: 100%;
-
-    .nav-bar {
-      height: 100%;
-    }
   }
 }
 
@@ -23,7 +19,7 @@
 }
 
 .row {
-  background-color: rgba(219, 219, 219, .7);
+ /* background-color: rgba(219, 219, 219, .7);*/
 }
 
 .nav-item {
@@ -139,7 +135,7 @@ input {
 #first_view {
   background: url(grunge_wall.png);
   height: 607px;
-  margin-top: -35px;
+  margin-top: -60px;
 }
 
 #browse-content {

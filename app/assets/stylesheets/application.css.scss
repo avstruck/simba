@@ -107,39 +107,37 @@ p {
 }
 
 
-
-
-
 /*////////NAV ITEMS///////////////*/
 #logo {
 	margin-top: 9px;
 }
 
 #price_filter {
-	margin-top: 18px;
+	margin-top: 5px;
 }
 
 #genre_filter {
-	margin-top: 18px;
+	margin-top: 5px;
 }
 
 #sign_up_link {
-	margin-top: 18px;
+	margin-top: 5px;
 }
 
 #sign_in_link {
-	margin-top: 18px;
+	margin-top: 5px;
 }
 
 #sign_out_link {
-	margin-top: 18px;
+	margin-top: 5px;
 }
 
 #username_link {
-	margin-top: 18px;
+	margin-top: 5px;
 }
 
 #search_bar_div {
+	margin-top: 0px;
 }
 
 
@@ -150,7 +148,8 @@ p {
 #pieces_search_box {
 	border-radius: 5px 5px;
 	margin-top: 10px;
-	padding-top: 9px	;
+	padding-top: 9px;
+	background-color: white;
 }
 
 #pieces_search_button {
@@ -163,6 +162,8 @@ p {
 	vertical-align: middle;
 	margin-left: -35px;
 	margin-bottom: 9px;
+	border: none;
+	background-color: white;
 }
 
 #pieces_search_box:focus {
@@ -174,13 +175,13 @@ p {
   font-family: 'EB Garamond', serif;
   font-size: 1.7;
   text-decoration: none;
-  color:black;
+  color: #67666A ;
   text-align: center;
   max-width: 10%;
   border: none;
   margin-left: auto;
   margin-right: auto;
- /* background-color: rgba(219, 219, 219, .9);*/
+  margin-top: -8px;
 
 }
 
