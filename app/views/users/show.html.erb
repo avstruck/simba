@@ -28,7 +28,7 @@
 
   <p class="user_profile">
   	<% if user_signed_in? %>
-  		The total price of your gallery is $<%= current_user.gallery_value %>.
+  		The total price of your gallery is $<%= current_user.gallery_value/100 %>.
   	<% else %>
   		<%= @user.bio %>
   	<% end %>
@@ -39,20 +39,13 @@
 	        <h4 class="gallery_label">Original Works</h4>
 	        <hr>
 	        <div id="masonry-container" class="transitions-enabled infinite-scroll centered fluid  clearfix">
-	          
-            <%= while true do %>
-              <%= if @piece.art_owner_id == current_user.id%>
-                <%= image_tag asset_path @piece.avatar %>
-              <% end %>
-            <% end %>
-
-            <% @pieces.each do |i| %>
+	          <% @pieces.each do |i| %>
 	            <figure class="box col3">
 	              <%= link_to (image_tag asset_path i.image_url), i %>
 	              <figcaption>
 	                <p class = "art_title"><%= i.title %></p>
 	                <p class = "artist_name"><%= i.artist.username%></p>
-	                $<p><%= i.original_value %></p>
+	                $<p><%= i.original_value/100 %></p>
 	              </figcaption>
 	            </figure>
 	          <% end %>  
@@ -68,7 +61,7 @@
                <figcaption>
                  <p class = "art_title"><%= piece.title %></p>
                  <p class = "artist_name"><%= piece.artist.username%></p>
-                 $<p><%= piece.original_value %></p>
+                 $<p><%= piece.original_value/100 %></p>
                </figcaption>
              </figure>
            <% end %>  

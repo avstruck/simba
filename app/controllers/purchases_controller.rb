@@ -12,7 +12,7 @@ class PurchasesController < ApplicationController
     token = params[:stripeToken]
 
     piece = Piece.find(params[:piece_id])
-    price = piece.print_value.to_i
+    price = piece.print_value
 
     # Create the charge on Stripe's servers - this will charge the user's card
     begin
