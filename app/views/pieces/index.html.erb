@@ -88,6 +88,7 @@
           <% @pieces.each do |i| %>
             <figure class="box col3">
               <%= link_to (image_tag asset_path i.image_url), "pieces/#{i.id}" %>
+              <%= link_to (image_tag asset_path i.avatar), "/pieces/#{i.id}" %>
               <figcaption class="figcaption">
                 Title of Art<p class = "art_title"><%= i.title %></p>
                 Salvador Dali<!--  <p class = "artist_name"></p> -->

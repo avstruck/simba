@@ -1,30 +1,52 @@
-<br>
-<div class="row" style="margin-top: -40px;">
-		<div class="art_info gray">
+	<div class="header">
+      <nav>
+        <div class="col-md-4 .col-xs-4 gray nav-bar">
+          <a href="/">Back to Home</a>
 
-			<p><span>Title:</span> <%= @piece.title %></p>
-			<p><span>Artist:</span> <%= @piece.artist_name %></p>
-			<p><span>Genre:</span> <%= @piece.genre %></p>
-			<p><span>Description:</span> <%= @piece.art_description %></p>
-			<p><span>Prints:</span> <%= @piece.number_prints %></p>
-			<p><span>Asking Price:</span> <%= @piece.original_value %></p>
-			<br><br>
+        </div>
+        <div class="nav-item main col-md-4 .col-xs-4">
+	        <p>Viewer</p>
+        </div>
+        <div class="col-md-4 .col-xs-4 gray nav-bar">
+          <% if user_signed_in? && (current_user.id == @user.id) %>
+            <div class="nav-item right"><%= link_to "Sign out", destroy_user_session_path, method: :delete%></div>
+            <div class="nav-item right"><a href="#myModal" data-toggle="modal">Account</a></div>
+          <% else %>
+            <div class="nav-item right"><a href="#sign_in" data-toggle="modal">Sign in</a></div>
+            <div class="nav-item right"><a href="#sign_up" data-toggle="modal">Sign up</a></div>
+          <% end %>
+        </div>
+      </nav>
+    </div>	
+<br><br>
 
-		    <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
-			<form action="/purchases" method="POST">
-			  <script
-			    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-			    data-key="pk_test_S3JqCMGRfDD5S46sEYXsqKKZ"
-			    data-image="/square-image.png"
-			    data-name="Simba"
-			    data-description="2 widgets ($20.00)"
-			    data-amount=<%= @piece.original_value.to_i %>>
-			  </script>
-			  <input type="hidden" name="piece_id" value=<%= @piece.id %>>
-			</form>
-		</div>		
+	<div class="row" style="margin-top: 50px;">
+			<div class="col-md-4 col-xs-4">
 
-		<%= image_tag asset_path @piece.image_url %>
-		<%= image_tag asset_path @piece.avatar %>
+				<p><span>Title:</span> <%= @piece.title %></p>
+				<p><span>Artist:</span> <%= @piece.artist_name %></p>
+				<p><span>Genre:</span> <%= @piece.genre %></p>
+				<p><span>Description:</span> <%= @piece.art_description %></p>
+				<p><span>Prints:</span> <%= @piece.number_prints %></p>
+				<p><span>Asking Price:</span> <%= @piece.original_value %></p>
+				<br><br>
 
-</div>
+			    <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
+				<form action="/purchases" method="POST">
+				  <script
+				    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+				    data-key="pk_test_S3JqCMGRfDD5S46sEYXsqKKZ"
+				    data-image="/square-image.png"
+				    data-name="Simba"
+				    data-description="2 widgets ($20.00)"
+				    data-amount=<%= @piece.original_value.to_i %>>
+				  </script>
+				  <input type="hidden" name="piece_id" value=<%= @piece.id %>>
+				</form>
+			</div>		
+		
+			<div class="col-md-8 col-xs-8">
+				<%= image_tag asset_path @piece.image_url %>
+				<%= image_tag asset_path @piece.avatar %>
+			</div>
+	</div>

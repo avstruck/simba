@@ -30,6 +30,7 @@ class PiecesController < ApplicationController
   end
   def show
     @piece = Piece.find(params[:id])
+    @user = current_user
   end
 
   private
