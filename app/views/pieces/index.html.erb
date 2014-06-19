@@ -11,12 +11,14 @@
       <nav>
           
   <!-- NAME / LOGO -->
-        <div class="nav-item main col-md-3" id="logo">
+        <div class="col-md-1" id="logo">
+      <%= link_to (image_tag asset_path "art_show_50.png"), root_path %> 
+        </div>
+
+        <div class="nav-item main col-md-3" id="logo_text">
           <%= link_to "Artshow", root_path %>
         </div>
 
-        <div class="col-md-1">
-        </div>
 
 
   <!--  SEARCH BAR -->
@@ -74,7 +76,7 @@
 
  <!-- SCROLL DOWN LINK -->
  <div id="scroll_down_link_container">
-    <a href="#browse-content" id="scroll_down_link" style="color:black; font-size:26px;">Browse Art
+    <a href="#browse-content" id="scroll_down_link">Browse Art
       <%= image_tag asset_path "down_arrow.png", id:"down_arrow"%> 
     </a>
  </div>
@@ -121,7 +123,6 @@
             <% end %>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           <div><%= f.submit "Sign in" %></div>
           <% end %>
         </div>
@@ -136,6 +137,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           <h4 class="modal-title" id="myModal">Sign up</h4>
         </div>
         <div class="modal-body">
@@ -153,15 +155,24 @@
 
             <div><%= f.label :password_confirmation %><br />
               <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+          
+
+
+
+<!-- COMMENTED OUT THE BIO AND ADDRESS FIELDS. MOVE TO GALLERY UPDATE. -->
           <!-- 
             <div><%= f.label :type %><br />
             <%= f.select :type, ['Artist' , 'Patron'], autofocus: true %></div> -->
 
-            <div><%= f.label :'Tell us about yourself:' %><br />
-            <%= f.text_area :bio, autofocus: true %></div>
+            <!-- <div><%= f.label :'Tell us about yourself:' %><br />
+            <%= f.text_area :bio, autofocus: true %></div> -->
 
-            <div><%= f.label :'address (for shipping purposes)' %><br />
-            <%= f.text_area :address, autofocus: true %></div>
+            <!-- <div><%= f.label :'address (for shipping purposes)' %><br />
+            <%= f.text_area :address, autofocus: true %></div> -->
+
+
+
+
         </div>
         <div class="modal-footer">
           <div><%= f.submit "Sign up" %></div>

@@ -11,20 +11,20 @@
 // about supported directives.
 //
 
-//= require jquery
-//= require jquery_ujs
 
-//= require masonry/jquery.masonry
-//= require masonry/jquery.event-drag
-//= require masonry/jquery.imagesloaded.min
-//= require masonry/jquery.infinitescroll.min
-//= require masonry/modernizr-transitions
+
+
+
+
+
+
+
 
 //Content generation helpers:
-//= require masonry/box-maker
-//= require masonry/jquery.loremimages.min
 
-//= require_tree .
+
+
+
 
 
 
@@ -64,7 +64,7 @@ $(function(){
   $('#masonry-container').masonry({
     itemSelector: '.box',
     // columnWidth: 375,
-    gutterWidth: 10
+    gutterWidth: 0
   });
 
 
@@ -109,7 +109,7 @@ $(function(){
 
 // SMOOTH SCROLLING CODE
 $(function() {
-$('#scroll_down_link').click(function() {
+$('#scroll_down_link').on('hover mouseover',function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
         || location.hostname == this.hostname) {
 
