@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://localhost:3000/#browse-content -->
+<html class=" js csstransitions"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Simba</title>
+    <link data-turbolinks-track="true" href="http://localhost:3000/assets/application.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/masonry/basic.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/masonry/centered.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/masonry/fluid.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/masonry/gutters.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/masonry/infinitescroll.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/masonry/right-to-left.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/masonry/transitions.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/bootstrap.min.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/galleries.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/piece.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/purchases.css?body=1" media="all" rel="stylesheet">
+<link data-turbolinks-track="true" href="http://localhost:3000/assets/users.css?body=1" media="all" rel="stylesheet">
+    <script data-turbolinks-track="true" src="./Simba_files/jquery.js"></script><style type="text/css"></style>
+<script data-turbolinks-track="true" src="./Simba_files/jquery_ujs.js"></script>
+<script data-turbolinks-track="true" src="./Simba_files/jquery.masonry.js"></script>
+<script data-turbolinks-track="true" src="./Simba_files/jquery.event-drag.js"></script>
+<script data-turbolinks-track="true" src="./Simba_files/jquery.imagesloaded.min.js"></script>
+<script data-turbolinks-track="true" src="./Simba_files/jquery.infinitescroll.min.js"></script>
+<script data-turbolinks-track="true" src="./Simba_files/modernizr-transitions.js"></script>
+<script data-turbolinks-track="true" src="./Simba_files/box-maker.js"></script>
+<script data-turbolinks-track="true" src="./Simba_files/jquery.loremimages.min.js"></script>
+<script data-turbolinks-track="true" src="./Simba_files/bootstrap.min.js"></script>
+<script data-turbolinks-track="true" src="./Simba_files/galleries.js"></script>
+<script data-turbolinks-track="true" src="./Simba_files/piece.js"></script>
+<script data-turbolinks-track="true" src="./Simba_files/purchases.js"></script>
+<script data-turbolinks-track="true" src="./Simba_files/users.js"></script>
+<script data-turbolinks-track="true" src="./Simba_files/application.js"></script>
+    <link href="./Simba_files/css" rel="stylesheet" type="text/css">
+    <link href="./Simba_files/css(1)" rel="stylesheet" type="text/css">
+    <link href="./Simba_files/css(2)" rel="stylesheet" type="text/css">
+    <meta content="authenticity_token" name="csrf-param">
+<meta content="j9qgkFNzpoU4FRT2oWmk2qHivMa2I/7haY1MXP4XMsY=" name="csrf-token">
+  </head>
+  <body>
+    
+
+  
+    
+
+
+
+<!--------------------------------------THE NAV BAR-------------------------------------->
+<div class="header container-fluid">
+  <div class="row">
+      <nav>
+          
+  <!-- NAME / LOGO -->
+        <div class="col-md-1" id="logo">
+      <a href="http://localhost:3000/"><img alt="Art show 50" src="./Simba_files/art_show_50.png"></a> 
+        </div>
+
+        <div class="nav-item main col-md-3" id="logo_text">
+          <a href="http://localhost:3000/">Artshow</a>
+        </div>
+
+
+
+  <!--  SEARCH BAR -->
+          <div class="nav-bar">
+              <div class="nav-item col-md-3" id="search_bar_div">
+                
+                    <form accept-charset="UTF-8" action="http://localhost:3000/" method="get"><div style="display:none"><input name="utf8" type="hidden" value="✓"></div>
+                      <p>
+                        <input id="pieces_search_box" name="pieces_search_box" placeholder="Search..." type="search">
+                        <input id="pieces_search_button" name="commit" type="submit" value="">
+                      </p>
+</form>
+              </div>
+          </div>      
+
+
+  <!-- PRICE / GENRE  -->  
+          <div>
+              <div class="nav-item col-md-1" id="price_filter"><a href="http://localhost:3000/">Price</a>
+              </div>
+              <div class="nav-item col-md-1" id="genre_filter"><a href="http://localhost:3000/">Genre</a>
+              </div>
+          </div>
+
+
+  <!-- SIGN IN / SIGN UP / USERNAME / LOGOUT -->
+        <div>
+            <div class="nav-item col-md-1 right" id="sign_in_link"><a href="http://localhost:3000/#sign_in" data-toggle="modal">Sign in</a></div>
+            <div class="nav-item col-md-1 right" id="sign_up_link"><a href="http://localhost:3000/#sign_up" data-toggle="modal">Sign up</a></div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <br><br><br><br>
+<!------------------------------------------------------------------------------------------------->
+
+
+<!-- THE FIRST VIEW -->
+    <div id="first_view">
+        <div id="gold_frame">
+          <br>
+            <img alt="Gold frame5" src="./Simba_files/gold_frame5.png">
+        </div>
+    </div>
+
+
+
+
+ <!-- SCROLL DOWN LINK -->
+ <div id="scroll_down_link_container">
+    <a href="./Simba_files/Simba.html" id="scroll_down_link">Browse Art
+      <img alt="Down arrow" src="./Simba_files/down_arrow.png"> 
+    </a>
+ </div>
+
+
+
+ <!-- BROWSING -->
+  <div class="browse_content" id="browse-content">
+        <br><br><br>
+        <div id="masonry-container" class="infinite-scroll centered fluid  clearfix masonry" style="position: relative; height: 2464px; width: 1125px;">
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 0px; left: 26px;">
+              <a href="http://localhost:3000/pieces/1"><img alt="Stream" src="./Simba_files/stream.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 0px; left: 401px;">
+              <a href="http://localhost:3000/pieces/2"><img alt="Arch sketch" src="./Simba_files/arch_sketch.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 0px; left: 776px;">
+              <a href="http://localhost:3000/pieces/3"><img alt="Bride" src="./Simba_files/bride.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 84px; left: 26px;">
+              <a href="http://localhost:3000/pieces/4"><img alt="Court house" src="./Simba_files/court_house.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 84px; left: 401px;">
+              <a href="http://localhost:3000/pieces/5"><img alt="Cover st anthonys church" src="./Simba_files/cover-st-anthonys-church.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 84px; left: 776px;">
+              <a href="http://localhost:3000/pieces/6"><img alt="Dark clouds" src="./Simba_files/dark_clouds.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 168px; left: 26px;">
+              <a href="http://localhost:3000/pieces/7"><img alt="Sunflower" src="./Simba_files/sunflower.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 168px; left: 401px;">
+              <a href="http://localhost:3000/pieces/8"><img alt="Trees" src="./Simba_files/trees.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 168px; left: 776px;">
+              <a href="http://localhost:3000/pieces/9"><img alt="White horses" src="./Simba_files/white_horses.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 252px; left: 26px;">
+              <a href="http://localhost:3000/pieces/10"><img alt="Elephant" src="./Simba_files/elephant.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 252px; left: 401px;">
+              <a href="http://localhost:3000/pieces/11"><img alt="Desert" src="./Simba_files/desert.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 252px; left: 776px;">
+              <a href="http://localhost:3000/pieces/12"><img alt="Gazebo" src="./Simba_files/gazebo.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 336px; left: 26px;">
+              <a href="http://localhost:3000/pieces/13"><img alt="Eye" src="./Simba_files/eye.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 336px; left: 401px;">
+              <a href="http://localhost:3000/pieces/14"><img alt="Howard fogg art train painting shhc008(1)" src="./Simba_files/Howard_Fogg_Art_Train_Painting_SHHC008(1).jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 336px; left: 776px;">
+              <a href="http://localhost:3000/pieces/15"><img alt="White horses" src="./Simba_files/white_horses.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 420px; left: 26px;">
+              <a href="http://localhost:3000/pieces/16"><img alt="Lakehouse" src="./Simba_files/lakehouse.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 420px; left: 401px;">
+              <a href="http://localhost:3000/pieces/17"><img alt="Farm house" src="./Simba_files/farm_house.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 420px; left: 776px;">
+              <a href="http://localhost:3000/pieces/18"><img alt="Sunset" src="./Simba_files/sunset.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 504px; left: 26px;">
+              <a href="http://localhost:3000/pieces/19"><img alt="Waves" src="./Simba_files/waves.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 504px; left: 401px;">
+              <a href="http://localhost:3000/pieces/20"><img alt="Watermelon" src="./Simba_files/watermelon.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 504px; left: 776px;">
+              <a href="http://localhost:3000/pieces/21"><img alt="Stream" src="./Simba_files/stream.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 588px; left: 26px;">
+              <a href="http://localhost:3000/pieces/22"><img alt="Arch sketch" src="./Simba_files/arch_sketch.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 588px; left: 401px;">
+              <a href="http://localhost:3000/pieces/23"><img alt="Bride" src="./Simba_files/bride.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 588px; left: 776px;">
+              <a href="http://localhost:3000/pieces/24"><img alt="Court house" src="./Simba_files/court_house.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 672px; left: 26px;">
+              <a href="http://localhost:3000/pieces/25"><img alt="Cover st anthonys church" src="./Simba_files/cover-st-anthonys-church.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 672px; left: 401px;">
+              <a href="http://localhost:3000/pieces/26"><img alt="Dark clouds" src="./Simba_files/dark_clouds.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 672px; left: 776px;">
+              <a href="http://localhost:3000/pieces/27"><img alt="Sunflower" src="./Simba_files/sunflower.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 756px; left: 26px;">
+              <a href="http://localhost:3000/pieces/28"><img alt="Trees" src="./Simba_files/trees.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 756px; left: 401px;">
+              <a href="http://localhost:3000/pieces/29"><img alt="White horses" src="./Simba_files/white_horses.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 756px; left: 776px;">
+              <a href="http://localhost:3000/pieces/30"><img alt="Elephant" src="./Simba_files/elephant.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 840px; left: 26px;">
+              <a href="http://localhost:3000/pieces/31"><img alt="Desert" src="./Simba_files/desert.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 840px; left: 401px;">
+              <a href="http://localhost:3000/pieces/32"><img alt="Gazebo" src="./Simba_files/gazebo.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 840px; left: 776px;">
+              <a href="http://localhost:3000/pieces/33"><img alt="Eye" src="./Simba_files/eye.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 924px; left: 26px;">
+              <a href="http://localhost:3000/pieces/34"><img alt="Howard fogg art train painting shhc008(1)" src="./Simba_files/Howard_Fogg_Art_Train_Painting_SHHC008(1).jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 924px; left: 401px;">
+              <a href="http://localhost:3000/pieces/35"><img alt="White horses" src="./Simba_files/white_horses.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 924px; left: 776px;">
+              <a href="http://localhost:3000/pieces/36"><img alt="Lakehouse" src="./Simba_files/lakehouse.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1008px; left: 26px;">
+              <a href="http://localhost:3000/pieces/37"><img alt="Farm house" src="./Simba_files/farm_house.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1008px; left: 401px;">
+              <a href="http://localhost:3000/pieces/38"><img alt="Sunset" src="./Simba_files/sunset.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1008px; left: 776px;">
+              <a href="http://localhost:3000/pieces/39"><img alt="Waves" src="./Simba_files/waves.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1092px; left: 26px;">
+              <a href="http://localhost:3000/pieces/40"><img alt="Watermelon" src="./Simba_files/watermelon.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title"></p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1092px; left: 401px;">
+              <a href="http://localhost:3000/pieces/41"><img alt="Stream" src="./Simba_files/stream.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">stream.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1092px; left: 776px;">
+              <a href="http://localhost:3000/pieces/42"><img alt="Arch sketch" src="./Simba_files/arch_sketch.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">arch_sketch.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1176px; left: 26px;">
+              <a href="http://localhost:3000/pieces/43"><img alt="Bride" src="./Simba_files/bride.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">bride.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1190px; left: 401px;">
+              <a href="http://localhost:3000/pieces/44"><img alt="Court house" src="./Simba_files/court_house.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">court_house.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1190px; left: 776px;">
+              <a href="http://localhost:3000/pieces/45"><img alt="Cover st anthonys church" src="./Simba_files/cover-st-anthonys-church.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">cover-st-anthonys-church.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1274px; left: 26px;">
+              <a href="http://localhost:3000/pieces/46"><img alt="Dark clouds" src="./Simba_files/dark_clouds.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">dark_clouds.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1288px; left: 401px;">
+              <a href="http://localhost:3000/pieces/47"><img alt="Sunflower" src="./Simba_files/sunflower.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">sunflower.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1288px; left: 776px;">
+              <a href="http://localhost:3000/pieces/48"><img alt="Trees" src="./Simba_files/trees.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">trees.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1372px; left: 26px;">
+              <a href="http://localhost:3000/pieces/49"><img alt="White horses" src="./Simba_files/white_horses.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">white_horses.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1386px; left: 401px;">
+              <a href="http://localhost:3000/pieces/50"><img alt="Elephant" src="./Simba_files/elephant.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">elephant.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1386px; left: 776px;">
+              <a href="http://localhost:3000/pieces/51"><img alt="Desert" src="./Simba_files/desert.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">desert.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1470px; left: 26px;">
+              <a href="http://localhost:3000/pieces/52"><img alt="Gazebo" src="./Simba_files/gazebo.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">gazebo.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1484px; left: 401px;">
+              <a href="http://localhost:3000/pieces/53"><img alt="Eye" src="./Simba_files/eye.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">eye.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1484px; left: 776px;">
+              <a href="http://localhost:3000/pieces/54"><img alt="Howard fogg art train painting shhc008(1)" src="./Simba_files/Howard_Fogg_Art_Train_Painting_SHHC008(1).jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">Howard_Fogg_Art_Train_Painting_SHHC008(1).jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1568px; left: 26px;">
+              <a href="http://localhost:3000/pieces/55"><img alt="White horses" src="./Simba_files/white_horses.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">white_horses.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1582px; left: 401px;">
+              <a href="http://localhost:3000/pieces/56"><img alt="Lakehouse" src="./Simba_files/lakehouse.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">lakehouse.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1582px; left: 776px;">
+              <a href="http://localhost:3000/pieces/57"><img alt="Farm house" src="./Simba_files/farm_house.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">farm_house.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1666px; left: 26px;">
+              <a href="http://localhost:3000/pieces/58"><img alt="Sunset" src="./Simba_files/sunset.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">sunset.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1680px; left: 401px;">
+              <a href="http://localhost:3000/pieces/59"><img alt="Waves" src="./Simba_files/waves.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">waves.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1680px; left: 776px;">
+              <a href="http://localhost:3000/pieces/60"><img alt="Watermelon" src="./Simba_files/watermelon.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">watermelon.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1764px; left: 26px;">
+              <a href="http://localhost:3000/pieces/61"><img alt="Stream" src="./Simba_files/stream.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">stream.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1778px; left: 401px;">
+              <a href="http://localhost:3000/pieces/62"><img alt="Arch sketch" src="./Simba_files/arch_sketch.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">arch_sketch.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1778px; left: 776px;">
+              <a href="http://localhost:3000/pieces/63"><img alt="Bride" src="./Simba_files/bride.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">bride.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1862px; left: 26px;">
+              <a href="http://localhost:3000/pieces/64"><img alt="Court house" src="./Simba_files/court_house.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">court_house.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1876px; left: 401px;">
+              <a href="http://localhost:3000/pieces/65"><img alt="Cover st anthonys church" src="./Simba_files/cover-st-anthonys-church.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">cover-st-anthonys-church.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1876px; left: 776px;">
+              <a href="http://localhost:3000/pieces/66"><img alt="Dark clouds" src="./Simba_files/dark_clouds.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">dark_clouds.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1960px; left: 26px;">
+              <a href="http://localhost:3000/pieces/67"><img alt="Sunflower" src="./Simba_files/sunflower.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">sunflower.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1974px; left: 401px;">
+              <a href="http://localhost:3000/pieces/68"><img alt="Trees" src="./Simba_files/trees.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">trees.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 1974px; left: 776px;">
+              <a href="http://localhost:3000/pieces/69"><img alt="White horses" src="./Simba_files/white_horses.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">white_horses.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 2058px; left: 26px;">
+              <a href="http://localhost:3000/pieces/70"><img alt="Elephant" src="./Simba_files/elephant.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">elephant.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 2072px; left: 401px;">
+              <a href="http://localhost:3000/pieces/71"><img alt="Desert" src="./Simba_files/desert.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">desert.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 2072px; left: 776px;">
+              <a href="http://localhost:3000/pieces/72"><img alt="Gazebo" src="./Simba_files/gazebo.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">gazebo.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 2156px; left: 26px;">
+              <a href="http://localhost:3000/pieces/73"><img alt="Eye" src="./Simba_files/eye.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">eye.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 2170px; left: 401px;">
+              <a href="http://localhost:3000/pieces/74"><img alt="Howard fogg art train painting shhc008(1)" src="./Simba_files/Howard_Fogg_Art_Train_Painting_SHHC008(1).jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">Howard_Fogg_Art_Train_Painting_SHHC008(1).jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 2170px; left: 776px;">
+              <a href="http://localhost:3000/pieces/75"><img alt="White horses" src="./Simba_files/white_horses.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">white_horses.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 2254px; left: 26px;">
+              <a href="http://localhost:3000/pieces/76"><img alt="Lakehouse" src="./Simba_files/lakehouse.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">lakehouse.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 2268px; left: 401px;">
+              <a href="http://localhost:3000/pieces/77"><img alt="Farm house" src="./Simba_files/farm_house.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">farm_house.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 2268px; left: 776px;">
+              <a href="http://localhost:3000/pieces/78"><img alt="Sunset" src="./Simba_files/sunset.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">sunset.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 2352px; left: 26px;">
+              <a href="http://localhost:3000/pieces/79"><img alt="Waves" src="./Simba_files/waves.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">waves.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+            <figure class="box col3 masonry-brick" style="position: absolute; top: 2366px; left: 401px;">
+              <a href="http://localhost:3000/pieces/80"><img alt="Watermelon" src="./Simba_files/watermelon.jpg"></a>
+              <figcaption class="figcaption">
+                Title of Art<p class="art_title">watermelon.jpg</p>
+                Salvador Dali<!--  <p class = "artist_name"></p> -->
+                $5000<p>10.0</p>
+              </figcaption>
+            </figure>
+        </div>
+
+  </div>
+
+
+<!-- MODAL SIGN IN -->
+  <div class="modal fade" id="sign_in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h4 class="modal-title" id="myModal">Sign in</h4>
+        </div>
+        <div class="modal-body">
+          <form accept-charset="UTF-8" action="http://localhost:3000/users/sign_in" class="new_user" id="new_user" method="post"><div style="display:none"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="j9qgkFNzpoU4FRT2oWmk2qHivMa2I/7haY1MXP4XMsY="></div>
+            <div><label for="user_email">Email</label><br>
+            <input autofocus="autofocus" id="user_email" name="user[email]" type="email"></div>
+
+            <div><label for="user_password">Password</label><br>
+            <input autocomplete="off" id="user_password" name="user[password]" type="password"></div>
+
+            <div><input name="user[remember_me]" type="hidden" value="0"><input id="user_remember_me" name="user[remember_me]" type="checkbox" value="1"> <label for="user_remember_me">Remember me</label></div>
+        </form></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <div><input name="commit" type="submit" value="Sign in"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- MODAL SIGN UP -->
+  <div class="modal fade" id="sign_up" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModal">Sign up</h4>
+        </div>
+        <div class="modal-body">
+          <form accept-charset="UTF-8" action="http://localhost:3000/users" class="new_user" id="new_user" method="post"><div style="display:none"><input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="j9qgkFNzpoU4FRT2oWmk2qHivMa2I/7haY1MXP4XMsY="></div>
+            
+
+            <div><label for="user_email">Email</label><br>
+            <input autofocus="autofocus" id="user_email" name="user[email]" type="email"></div>
+
+            <div><label for="user_username">Username</label><br>
+            <input id="user_username" name="user[username]" type="text"></div>
+
+            <div><label for="user_password">Password</label><br>
+              <input autocomplete="off" id="user_password" name="user[password]" type="password"></div>
+
+            <div><label for="user_password_confirmation">Password confirmation</label><br>
+              <input autocomplete="off" id="user_password_confirmation" name="user[password_confirmation]" type="password"></div>
+          
+
+
+
+<!-- COMMENTED OUT THE BIO AND ADDRESS FIELDS. MOVE TO GALLERY UPDATE. -->
+          <!-- 
+            <div><label for="user_type">Type</label><br />
+            <select id="user_type" name="user[type]"><option value="Artist">Artist</option>
+<option value="Patron">Patron</option></select></div> -->
+
+            <!-- <div><label for="user_Tell us about yourself:">Tell us about yourself:</label><br />
+            <textarea autofocus="autofocus" id="user_bio" name="user[bio]">
+</textarea></div> -->
+
+            <!-- <div><label for="user_address (for shipping purposes)">Address (for shipping purposes)</label><br />
+            <textarea autofocus="autofocus" id="user_address" name="user[address]">
+</textarea></div> -->
+
+
+
+
+        </form></div>
+        <div class="modal-footer">
+          <div><input name="commit" type="submit" value="Sign up"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+
+    <div class="footer">
+      <div>Copyright © Simba</div>
+    </div>
+  
+</body></html>

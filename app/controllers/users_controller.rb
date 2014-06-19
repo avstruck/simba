@@ -12,7 +12,6 @@ class UsersController < ApplicationController
     @pieces = @user.owned_pieces.uniq
     @prints = @user.unique_prints
       
-      
   end
 
 end
