@@ -1,5 +1,7 @@
 <h1>Upload a new piece or <%= link_to 'go back to your gallery', "/users/#{current_user.id}" %></h1>
 
+
+
    <%= form_for @new_piece, url: '/pieces/create', html: { :multipart => true }, method: 'post' do |f| %>
      <%= f.file_field :avatar %>
      <br>
