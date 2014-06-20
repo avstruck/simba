@@ -1,41 +1,80 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <div class="header">
+    
+<!----------------------- NAV BAR ------------------------>
+    <div class="header" id="gallery_nav_bar">
       <nav>
-        <div class="col-md-4 .col-xs-4 gray nav-bar">
-          <a href="/">Browse</a>
-          <a href="/">Search Gallery</a>
+        
+	<!-- BACK TO BROWSE/LOGO -->
+       <div class="col-md-1" id="logo">
+      		<%= link_to (image_tag asset_path "art_show_50.png"), root_path %> 
+       </div>
+
+   <!-- USERNAME/GALLERY TITLE-->
+    <div class="nav-item main col-md-4 .col-xs-4" id="username_gallery">
+        <%= @user.username %>
+    </div>
+
+	<!-- SEARCH GALLERY-->
+       <div class="nav-item col-md-3" id="search_gallery">
+            
+                <%= form_tag root_path, :method => 'get' do %>
+                  <p>
+                    <%= search_field_tag 'pieces_search_box', params[:q], :placeholder =>"Search..."%>
+                    <%= submit_tag "", :title => nil, :id => "pieces_search_button" %>
+                  </p>
+                <%end%>
+         </div>
+
+
+    <!-- UPLOAD BUTTON -->
+        <div class="col-md-1" id="upload_button">
           <a href="/pieces/new" class="btn btn-primary btn-md active" role="button">
             Upload Art
-          </a>
+          </a> 
         </div>
-        <div class="nav-item main col-md-4 .col-xs-4">
-	        <%= @user.username %>
-        </div>
-        <div class="col-md-4 .col-xs-4 gray nav-bar">
+
+    <!-- ACCOUNT SETTINGS / SIGN IN / SIGN UP-->    
+        <div class="col-md-1 .col-xs-1">
           <% if user_signed_in? && (current_user.id == @user.id) %>
-            <div class="nav-item right"><%= link_to "Sign out", destroy_user_session_path, method: :delete%></div>
-            <div class="nav-item right"><a href="#myModal" data-toggle="modal">Account</a></div>
-          <% else %>
-            <div class="nav-item right"><a href="#sign_in" data-toggle="modal">Sign in</a></div>
-            <div class="nav-item right"><a href="#sign_up" data-toggle="modal">Sign up</a></div>
-          <% end %>
+            	<div class="nav-item"><a href="#myModal" data-toggle="modal">Account</a>
+            	</div>
         </div>
+
+
+	<!-- SIGN OUT -->
+          	<div class="col-md-1">
+	          	<div class="nav-item" id="sign_out_link_gallery"><%= link_to "Sign Out", destroy_user_session_path, method: :delete%>
+	           	</div>
+	      <% else %>
+	         <div class="col-md-1">
+	           	 <div class="nav-item"><a href="#sign_in" data-toggle="modal">Sign in</a></div>
+	         </div>
+	         <div class="col-md-1">
+	          	  <div class="nav-item"><a href="#sign_up" data-toggle="modal">Sign up</a></div>
+	      	 </div>
+	          <% end %>
+
+
       </nav>
     </div>
   <br><br><br> 
+<!-------------------- END OF NAV BAR ------------------->
 
-  <p class="user_profile">
+
+<!-- GALLERY VALUE -->
+  <p class="user_profile" id="gallery_value">
   	<% if user_signed_in? %>
-  		The total price of your gallery is $<%= current_user.gallery_value %>.
+  		The total value of your gallery is $<%= current_user.gallery_value %>.
   	<% else %>
   		<%= @user.bio %>
   	<% end %>
   </p>
 
 
-    <div class="browse_content">
+<!------------------ BROWSE GALLERY -------------------->
+    <div class="browse_content" id="browse_gallery">
 	        <h4 class="gallery_label">Original Works</h4>
 	        <hr>
 	        <div id="masonry-container" class="transitions-enabled infinite-scroll centered fluid  clearfix">    
@@ -70,6 +109,7 @@
 
 
 
+<!------------------ MODAL SIGN IN -------------------->
   <div class="modal fade" id="sign_in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -99,6 +139,8 @@
   </div>
 
 
+
+<!------------------ MODAL SIGN UP -------------------->
   <div class="modal fade" id="sign_up" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -137,13 +179,10 @@
       </div>
     </div>
   </div>
-
-
-
-
 		
-		
+	
 
+<!------------------ MODAL ACCOUNT SETTINGS ---------------->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		  <div class="modal-dialog">
 		    <div class="modal-content">

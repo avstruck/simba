@@ -109,7 +109,7 @@ $(function(){
 
 // SMOOTH SCROLLING CODE
 $(function() {
-$('#scroll_down_link').on('hover mouseover',function() {
+$('#scroll_down_link').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
         || location.hostname == this.hostname) {
 

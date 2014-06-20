@@ -92,9 +92,9 @@
               <%= link_to (image_tag asset_path i.image_url), "pieces/#{i.id}" %>
               <%= link_to (image_tag asset_path i.avatar), "/pieces/#{i.id}" %>
               <figcaption class="figcaption">
-                Title of Art<p class = "art_title"><%= i.title %></p>
-                Salvador Dali<!--  <p class = "artist_name"></p> -->
-                $5000<p><%= i.original_value %></p>
+                <p class = "art_title"><%= i.title %></p>
+                <!--  <p class = "artist_name"></p> -->
+                <p><%= i.original_value %></p>
               </figcaption>
             </figure>
           <% end %>  
@@ -124,7 +124,7 @@
             <% end %>
         </div>
         <div class="modal-footer">
-          <div><%= f.submit "Sign in" %></div>
+          <div id="modal_sign_in_button"><%= f.submit "Sign in" %></div>
           <% end %>
         </div>
       </div>

@@ -38,7 +38,6 @@ class PurchasesController < ApplicationController
 
     # The card has been declined
     rescue Stripe::CardError => e
-      flash 
       redirect_to root_path
     end
   end

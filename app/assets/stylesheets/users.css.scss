@@ -2,22 +2,92 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.user_profile {
+/*.user_profile {
 	text-align: center;
 	font-family: "Source Sans Pro", sans serif;
-	font-size: 14px
+	font-size: 14px;
 }
+*/
 
+/*
 hr {
 	background-color: #000;
 	height: 2px;
 	text-align: center;
 	width: 100%;
 	margin: 0;
+}*/
+#gallery_nav_bar {
+	border: none;
 }
+
 
 .gallery_label {
 	font-family: "Merriweather", serif;
 	margin: 0;
 }
+
+
+#browse_gallery {
+	margin-top: 20px;
+}
+
+#gallery_value {
+	margin-top: 20px ;
+}
+
+#upload_button {
+	margin-top: 9px;
+	padding-right: 10px;
+}
+
+#sign_out_link_gallery {
+	width: 165px;
+	margin-top: 6px;
+	
+}
+
+#gallery_logo {
+	margin-bottom: 0px;
+}
+
+#username_gallery {
+	text-align: left;
+	padding: 0px;
+	margin-left: -20px;
+	margin-top: 12px;
+
+}
+
+#search_gallery {
+	
+
+}
+
+#gallery_upload_link {
+	/*text-align: center;
+	font-family: "Source Sans Pro", sans serif;
+	font-size: 26px;
+	color: black;
+	margin-top: 12px;
+	text-decoration: none;
+*/
+}
+
+#gallery_upload_link:hover {
+	text-decoration: none;
+	color: black;
+
+}
+
+
+#upload_button {
+	margin-top: 15px;
+	margin-right: 10px;
+	box-shadow: none 0 0px 0px rgba(0,0,0,0);
+}
+
+
+
+
 
