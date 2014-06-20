@@ -3,8 +3,6 @@
   <body>
     
 
-
-
 <!--------------------------------------THE NAV BAR-------------------------------------->
 <div class="header container-fluid">
   <div class="row">
@@ -25,9 +23,9 @@
           <div class="nav-bar">
               <div class="nav-item col-md-3" id="search_bar_div">
                 
-                    <%= form_tag root_path, :method => 'get' do %>
+                    <%= form_tag root_path, :method => 'get', id: 'pieces_search' do %>
                       <p>
-                        <%= search_field_tag 'pieces_search_box', params[:q], :placeholder =>"Search..."%>
+                        <%= search_field_tag 'pieces_search_box', params[:pieces_search_box], :placeholder =>"Search..."%>
                         <%= submit_tag "", :title => nil, :id => "pieces_search_button" %>
                       </p>
                     <%end%>
