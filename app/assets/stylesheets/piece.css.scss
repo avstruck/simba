@@ -12,11 +12,12 @@
   nav {
     height: 100%;
   }
+
+  ul {
+    text-align: left;
+  }
 }
 
-.right{
-  float: right;
-}
 
 .row {
  /* background-color: rgba(219, 219, 219, .7);*/
@@ -30,8 +31,6 @@
   text-transform: capitalize;
   font-size: 130%;
   line-height: 50px;
-  overflow-y: hidden;
-  overflow: hidden;
   margin: 6px 10px;
 
   a {
@@ -215,6 +214,33 @@ img{
 
 #upload_icon_button {
   background: url(upload2.png) no-repeat;
+}
+
+
+
+/*/////////////VIEWER PAGE///////////////*/
+
+
+#piece_viewer_title {
+  color: black !important;
+  border: none;
+  font-size: 36px;
+  margin-top: 25px;
+  float:left;
+  padding: 0px;
+  margin-left: -15px;
+
+}
+
+#sign_out_link_gallery {
+  color: black;
+  text-decoration:none;
+}
+
+#sign_out_link_gallery:hover {
+  color: black;
+  text-decoration:none;
+
 }
 
 

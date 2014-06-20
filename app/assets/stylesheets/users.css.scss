@@ -2,21 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/*.user_profile {
+.user_profile {
 	text-align: center;
 	font-family: "Source Sans Pro", sans serif;
 	font-size: 14px;
 }
-*/
 
-/*
+
 hr {
 	background-color: #000;
 	height: 2px;
 	text-align: center;
 	width: 100%;
 	margin: 0;
-}*/
+}
 #gallery_nav_bar {
 	border: none;
 }
@@ -24,7 +23,9 @@ hr {
 
 .gallery_label {
 	font-family: "Merriweather", serif;
-	margin: 0;
+	margin-top: 30px;
+	margin-left: 30px;
+	margin-bottom: 0px;
 }
 
 
@@ -42,10 +43,31 @@ hr {
 }
 
 #sign_out_link_gallery {
-	width: 165px;
+	width: 300px;
 	margin-top: 6px;
+	float: right;
 	
 }
+
+#sign_up_gallery {
+	paddding: 50px;
+	width: 100px;
+	float: right;
+	text-align: right;
+	
+
+}
+
+#sign_in_gallery {
+	text-align: right;
+	width: 300px;
+	paddding: 25px;
+}
+
+#account_link_gallery {
+	float:right;
+}
+
 
 #gallery_logo {
 	margin-bottom: 0px;

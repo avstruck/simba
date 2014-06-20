@@ -4,6 +4,7 @@
     
 <!----------------------- NAV BAR ------------------------>
     <div class="header" id="gallery_nav_bar">
+      <div class="row">
       <nav>
         
 	<!-- BACK TO BROWSE/LOGO -->
@@ -29,16 +30,19 @@
 
 
     <!-- UPLOAD BUTTON -->
+
+    <% if user_signed_in? && current_user.id == @user.id %>
         <div class="col-md-1" id="upload_button">
           <a href="/pieces/new" class="btn btn-primary btn-md active" role="button">
             Upload Art
           </a> 
         </div>
+    <% end %>
 
     <!-- ACCOUNT SETTINGS / SIGN IN / SIGN UP-->    
         <div class="col-md-1 .col-xs-1">
           <% if user_signed_in? && (current_user.id == @user.id) %>
-            	<div class="nav-item"><a href="#myModal" data-toggle="modal">Account</a>
+            	<div class="nav-item" id="account_link_gallery"><a href="#myModal" data-toggle="modal">Account</a>
             	</div>
         </div>
 
@@ -47,54 +51,59 @@
           	<div class="col-md-1">
 	          	<div class="nav-item" id="sign_out_link_gallery"><%= link_to "Sign Out", destroy_user_session_path, method: :delete%>
 	           	</div>
+	        </div>
 	      <% else %>
 	         <div class="col-md-1">
-	           	 <div class="nav-item"><a href="#sign_in" data-toggle="modal">Sign in</a></div>
+	           	 <div class="nav-item" id="sign_in_gallery"><a href="#sign_in" data-toggle="modal">Sign in</a></div>
 	         </div>
 	         <div class="col-md-1">
-	          	  <div class="nav-item"><a href="#sign_up" data-toggle="modal">Sign up</a></div>
+	          	  <div class="nav-item" id="sign_up_gallery"><a href="#sign_up" data-toggle="modal">Sign up</a></div>
 	      	 </div>
-	          <% end %>
+	          
 
 
       </nav>
-    </div>
+  	</div>
+   </div>
   <br><br><br> 
 <!-------------------- END OF NAV BAR ------------------->
 
 
 <!-- GALLERY VALUE -->
   <p class="user_profile" id="gallery_value">
+	<% if user_signed_in? && current_user.id == @user.id %>
+
 
   		The total value of your gallery is $<%= current_user.gallery_value %>.
-
-  	<% else %>
+	<%end%>
+  	
   		<%= @user.bio %>
   	<% end %>
   </p>
 
 
 <!------------------ BROWSE GALLERY -------------------->
+    <br><br><br><br><br><br> 
     <div class="browse_content" id="browse_gallery">
-	        <h4 class="gallery_label">Original Works</h4>
+	        <h4 class="gallery_label">Your Works</h4>
 	        <hr>
 
-	        <div id="masonry-container" class="transitions-enabled infinite-scroll centered fluid  clearfix">    
+	        <div id="masonry-container" class="infinite-scroll centered fluid  clearfix">    
               <% @pieces.each do |piece|  %>
   	            <figure class="box col3">
                    <%= link_to (image_tag asset_path piece.avatar), "/pieces/#{piece.id}" %>
-      	              <figcaption>
+      	              <figcaption class="figcaption">
       	                <p class = "art_title"><%= piece.title %></p>
       	                <p class = "artist_name"><%= piece.artist_name %></p>
-      	                $<p><%= piece.original_value %></p>
+      	                <p>$<%= piece.original_value %></p>
       	              </figcaption>
   	            </figure>
   	          <% end %> 
 	        </div>
-	        <h4 class="gallery_label">Prints</h4>
+	     <!--    <h4 class="gallery_label">Prints</h4>
 	        <hr>
 
-	        <div id="masonry-container" class="transitions-enabled infinite-scroll centered fluid  clearfix">
+	        <div id="masonry-container" class="infinite-scroll centered fluid  clearfix">
            <% @prints.each do |print| %>
             <% piece = print.piece %>
              <figure class="box col3">
@@ -102,11 +111,11 @@
                <figcaption>
                  <p class = "art_title"><%= piece.title %></p>
                  <p class = "artist_name"><%= piece.artist.username%></p>
-                 $<p><%= piece.original_value/100 %></p>
+                 <p>$<%= print.original_value/100 %></p>
                </figcaption>
              </figure>
            <% end %>  
-         </div>
+         </div> -->
 	</div>
 
 

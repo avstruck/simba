@@ -7,6 +7,7 @@ class PiecesController < ApplicationController
   end
 
   def create
+    params[:piece][:original_value] = params[:piece][:original_value].to_f
     @new_piece = Piece.create( piece_params )
     @new_piece.update_attributes(artist_id: current_user.id, art_owner_id: current_user.id, artist_name: current_user.username)
 

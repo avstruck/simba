@@ -9,11 +9,11 @@
       <nav>
           
   <!-- NAME / LOGO -->
-        <div class="col-md-1" id="logo">
+        <div class="col-md-1 col-xs-4" id="logo">
       <%= link_to (image_tag asset_path "art_show_50.png"), root_path %> 
         </div>
 
-        <div class="nav-item main col-md-3" id="logo_text">
+        <div class="nav-item main col-md-3 col-xs-8" id="logo_text">
           <%= link_to "Artshow", root_path %>
         </div>
 
@@ -21,7 +21,7 @@
 
   <!--  SEARCH BAR -->
           <div class="nav-bar">
-              <div class="nav-item col-md-3" id="search_bar_div">
+              <div class="nav-item col-md-3 col-xs-12" id="search_bar_div">
                 
                     <%= form_tag root_path, :method => 'get', id: 'pieces_search' do %>
                       <p>
@@ -34,11 +34,37 @@
           </div>      
 
 
-  <!-- PRICE / GENRE  -->  
+
+<!-- PRICE / GENRE  -->  
           <div>
-              <div class="nav-item col-md-1" id="price_filter"><a href="/">Price</a>
+              <div class="nav-item col-md-1" id="price_filter">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Genre <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Indian, Chinese, Japanese</a></li>
+                    <li><a href="#">Byzantine, Islamic</a></li>
+                    <li><a href="#">Middle Ages</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Renaissance</a></li>
+                    <li><a href="#">Baroque</a></li>
+                    <li><a href="#">Romanticism</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Realism</a></li>
+                    <li><a href="#">Impressionism</a></li>
+                    <li><a href="#">Expressionism</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Cubism, Futurism</a></li>
+                    <li><a href="#">Surrealism</a></li>
+                    <li><a href="#">Postmodernism</a></li>
+                </ul>
               </div>
-              <div class="nav-item col-md-1" id="genre_filter"><a href="/">Genre</a>
+              <div class="nav-item col-md-1 dropdown" id="genre_filter">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Price<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">$0 - $200</a></li>
+                    <li><a href="#">$200 - $500</a></li>
+                    <li><a href="#">$500 - $2500</a></li>
+                    <li><a href="#">$2500 +</a></li>
+                </ul>
               </div>
           </div>
 
@@ -46,11 +72,12 @@
   <!-- SIGN IN / SIGN UP / USERNAME / LOGOUT -->
         <div>
           <% if current_user %>
-            <div class="nav-item col-md-1 right" id="sign_out_link"><%= link_to "Sign out", destroy_user_session_path, method: :delete%></div>
-            <div class="nav-item col-md-1 right" id="username_link"><%= link_to current_user.username, "/users/#{current_user.id}"%></div>
+            <div class="nav-item col-md-1 col-xs-3" id="username_link"><%= link_to current_user.username, "/users/#{current_user.id}"%>
+            </div>
+            <div class="nav-item col-md-1 col-xs-3" id="sign_out_link"><%= link_to "Sign out", destroy_user_session_path, method: :delete%></div>
           <% else %>
-            <div class="nav-item col-md-1 right" id="sign_in_link" ><a href="#sign_in" data-toggle="modal">Sign in</a></div>
-            <div class="nav-item col-md-1 right" id="sign_up_link"><a href="#sign_up" data-toggle="modal">Sign up</a></div>
+            <div class="nav-item col-md-1 col-xs-3" id="sign_in_link" ><a href="#sign_in" data-toggle="modal">Sign in</a></div>
+            <div class="nav-item col-md-1 col-xs-3" id="sign_up_link"><a href="#sign_up" data-toggle="modal">Sign up</a></div>
             <% end %>
         </div>
       </nav>
@@ -80,7 +107,7 @@
  </div>
 
 
-
+<br><br><br><br><br><br>
  <!-- BROWSING -->
   <div class="browse_content" id="browse-content">
         <br><br><br>
@@ -92,7 +119,7 @@
               <figcaption class="figcaption">
                 <p class = "art_title"><%= i.title %></p>
 
-                <p class = "artist_name">by <%= i.artist_name %></p>
+                <p class = "artist_name" id="artist_name_link">by <%=link_to (i.artist_name), "/users/#{i.artist_id}" %></p>
                 <p>$<%= i.original_value/100 %></p>
 
               </figcaption>
