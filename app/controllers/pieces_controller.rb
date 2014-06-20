@@ -24,9 +24,10 @@ class PiecesController < ApplicationController
   end
 
   def index
-    @pieces = Piece.all
-    @pieces = Piece.search(params[:q])
-    # @pieces = Piece.new
+    # @pieces = Piece.filter(params[:q])
+    # @pieces = Piece.search(params[:pieces_search_box])
+    q = "%#{params[:pieces_search_box]}%"
+    @pieces = Piece.where("title like ? or genre like ? or art_description like ? or artist_name like ?", q, q, q, q)
   end
   def show
     @piece = Piece.find(params[:id])
