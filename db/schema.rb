@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140618172711) do
+ActiveRecord::Schema.define(version: 20140618202435) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20140618172711) do
     t.integer  "artist_id"
     t.string   "title"
     t.string   "genre"
-    t.float    "original_value"
+    t.integer  "original_value"
     t.integer  "art_owner_id"
     t.integer  "copyright_owner_id"
     t.integer  "number_prints"
@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20140618172711) do
     t.string   "ownership_type"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.float    "print_value"
+    t.integer  "print_value"
     t.string   "artist_name"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 20140618172711) do
     t.datetime "purchase_date"
     t.string   "purchase_type"
     t.integer  "quantity"
-    t.float    "purchase_price"
+    t.integer  "purchase_price"
     t.integer  "initiator_id"
     t.integer  "acceptor_id"
     t.datetime "created_at"

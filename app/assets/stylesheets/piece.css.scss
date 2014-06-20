@@ -167,7 +167,55 @@ input {
 
 }
 
+img{
+  max-width: 825px;
+  height: auto;
+}
 
+.jumbotron{
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  border: solid;
+  font-family: 'Merriweather', serif;
+  text-align: center;
+  border-radius: 15px;
+  opacity: 0.75;
+}
+
+.new_form_header{
+  font-family: 'Merriweather', serif;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: center;
+}
+
+#upload_box{
+  position: absolute;
+  margin-left: 12.5%;
+  margin-bottom: 20px;
+;
+}
+
+#upload_box>input {
+  align-content: middle;
+
+}
+
+.new_art_page{
+  height: 100%;
+  margin-top: -5px;
+  background: url(grunge_wall.png), no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#upload_icon_button {
+  background: url(upload2.png) no-repeat;
+}
 
 
 

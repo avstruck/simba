@@ -11,26 +11,7 @@
 // about supported directives.
 //
 
-
-
-
-
-
-
-
-
-
 //Content generation helpers:
-
-
-
-
-
-
-
-
-
-
 
 $(function(){
 	$('#container').masonry({
@@ -100,11 +81,17 @@ $(function(){
   
 });
 
-// $("#pieces_search input").keyup(function() {
-//     $.get($("#pieces_search").attr("action"), $("#pieces_search").serialize(), null, "script");
-//     return false;
-//   });
-// });
+$(function() {
+  $("#pieces_search").on('submit', function() {
+    $.get(this.action, $(this).serialize(), null, "script");
+    return false;
+  });
+
+  $('#pieces_search input').keyup(function() {
+    $.get($("#pieces_search").action, $("#pieces_search").serialize(), null, "script");
+    return false;
+  });
+});
 
 
 // SMOOTH SCROLLING CODE

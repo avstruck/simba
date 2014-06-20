@@ -2,7 +2,6 @@
       <nav>
         <div class="col-md-4 .col-xs-4 gray nav-bar">
           <a href="/">Back to Home</a>
-
         </div>
         <div class="nav-item main col-md-4 .col-xs-4">
 	        <p>Viewer</p>
@@ -20,33 +19,35 @@
     </div>	
 <br><br>
 
-	<div class="row" style="margin-top: 50px;">
-			<div class="col-md-2 col-xs-4">
+<div class="row" style="margin-top: 50px;">
+		<div class="col-md-2 col-xs-4">
+		<p><span>Title:</span> <%= @piece.title %></p>
+		<p><span>Artist:</span> <%= @piece.artist_id %></p>
+		<p><span>Genre:</span> <%= @piece.genre %></p>
+		<p><span>Description:</span> <%= @piece.art_description %></p>
+		<p><span>Prints:</span> <%= @piece.number_prints %></p>
+		<p><span>Owner:</span> <%= @piece.art_owner_id %></p>
+		<p><span>Original:</span> $<%= @piece.original_value/100 %></p>
+		<p><span>Print:</span> $<%= @piece.print_value.to_f/100 %></p>
+		<br><br>
 
-				<p><span>Title:</span> <%= @piece.title %></p>
-				<p><span>Artist:</span> <%= @piece.artist_name %></p>
-				<p><span>Genre:</span> <%= @piece.genre %></p>
-				<p><span>Description:</span> <%= @piece.art_description %></p>
-				<p><span>Prints:</span> <%= @piece.number_prints %></p>
-				<p><span>Asking Price:</span> <%= @piece.original_value %></p>
-				<br><br>
+	    <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
+		<form action="/purchases" method="POST">
+		  <script
+		    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+		    data-key="pk_test_S3JqCMGRfDD5S46sEYXsqKKZ"
+		    data-image="/square-image.png"
+		    data-name="Simba"
+		    data-description="2 widgets ($20.00)"
+		    data-amount=<%= @piece.print_value %>>
+		  </script>
+		  <input type="hidden" name="piece_id" value=<%= @piece.id %>>
+		</form>
+		</div>		
 
-			    <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
-				<form action="/purchases" method="POST">
-				  <script
-				    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-				    data-key="pk_test_S3JqCMGRfDD5S46sEYXsqKKZ"
-				    data-image="/square-image.png"
-				    data-name="Simba"
-				    data-description="2 widgets ($20.00)"
-				    data-amount=<%= @piece.original_value.to_i %>>
-				  </script>
-				  <input type="hidden" name="piece_id" value=<%= @piece.id %>>
-				</form>
-			</div>		
-		
-			<div class="col-md-10 col-xs-8">
-				<%= image_tag asset_path @piece.image_url %>
-				<%= image_tag asset_path @piece.avatar %>
-			</div>
+
+		<div class="col-md-10 col-xs-8">
+			<%= image_tag asset_path @piece.image_url %>
+			<%= image_tag asset_path @piece.avatar %>
+		</div>
 	</div>
