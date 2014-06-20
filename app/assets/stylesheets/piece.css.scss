@@ -172,6 +172,33 @@ img{
   height: auto;
 }
 
+.jumbotron{
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  border: solid;
+  text-align: center;
+}
+
+.new_form_header{
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: center;
+}
+
+#upload_box{
+  position: absolute;
+  margin-left: 12.5%;
+  margin-bottom: 20px;
+;
+}
+
+#upload_box>input {
+  align-content: middle;
+
+}
+
 
 
 

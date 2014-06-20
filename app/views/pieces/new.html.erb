@@ -1,9 +1,14 @@
-<h1>Upload a new piece or <%= link_to 'go back to your gallery', "/users/#{current_user.id}" %></h1>
+<div class="new_form_header">
+     <h1>Upload a new piece or <br><%= link_to 'go back to your gallery', "/users/#{current_user.id}" %></h1>
+</div>
 
-
+<div class="jumbotron">
 
    <%= form_for @new_piece, url: '/pieces/create', html: { :multipart => true }, method: 'post' do |f| %>
+     <div id="upload_box">
      <%= f.file_field :avatar %>
+     </div>
+     <br>
      <br>
      <div>
      <%= f.label "Title of your piece:" %><br>
@@ -31,6 +36,8 @@
      </div>
      <br>
      <%= f.submit "Upload!" %>
+
+</div>
 
    <% end %>
 
