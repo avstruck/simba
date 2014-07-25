@@ -25,40 +25,31 @@
                     <%= search_field_tag 'pieces_search_box', params[:q], :placeholder =>"Search..."%>
                     <%= submit_tag "", :title => nil, :id => "pieces_search_button" %>
                   </p>
-                <%end%>
          </div>
 
 
-    <!-- UPLOAD BUTTON -->
-
-    <% if user_signed_in? && current_user.id == @user.id %>
-        <div class="col-md-1" id="upload_button">
-          <a href="/pieces/new" class="btn btn-primary btn-md active" role="button">
-            Upload Art
-          </a> 
-        </div>
-    <% end %>
-
-    <!-- ACCOUNT SETTINGS / SIGN IN / SIGN UP-->    
-        <div class="col-md-1 .col-xs-1">
+    <!-- ACCOUNT SETTINGS / SIGN IN / SIGN UP / SIGN OUT -->    
           <% if user_signed_in? && (current_user.id == @user.id) %>
+          	<div class="col-md-1">
+	          <div class="nav-item" id="upload_art"><%= link_to "Upload", "/pieces/new", method: :get%>
+	          </div>
+	        </div>
+          	<div class="col-md-1 .col-xs-1">
             	<div class="nav-item" id="account_link_gallery"><a href="#myModal" data-toggle="modal">Account</a>
             	</div>
-        </div>
-
-
-	<!-- SIGN OUT -->
+          	</div>
           	<div class="col-md-1">
-	          	<div class="nav-item" id="sign_out_link_gallery"><%= link_to "Sign Out", destroy_user_session_path, method: :delete%>
+	          	<div class="nav-item"  ><%= link_to "SignOut", destroy_user_session_path, method: :delete%>
 	           	</div>
 	        </div>
 	      <% else %>
-	         <div class="col-md-1">
-	           	 <div class="nav-item" id="sign_in_gallery"><a href="#sign_in" data-toggle="modal">Sign in</a></div>
-	         </div>
-	         <div class="col-md-1">
-	          	  <div class="nav-item" id="sign_up_gallery"><a href="#sign_up" data-toggle="modal">Sign up</a></div>
-	      	 </div>
+	        <div class="col-md-1">
+	         	<div class="nav-item" id="sign_in_gallery"><a href="#sign_in" data-toggle="modal">Sign in</a></div>
+	        </div>
+	        <div class="col-md-1">
+	          	<div class="nav-item" id="sign_up_gallery"><a href="#sign_up" data-toggle="modal">Sign up</a></div>
+	      	</div>
+	      <%end%>
 	          
 
 
@@ -100,7 +91,7 @@
   	            </figure>
   	          <% end %> 
 	        </div>
-	     <!--    <h4 class="gallery_label">Prints</h4>
+<<!-- h4 class="gallery_label">Prints</h4>
 	        <hr>
 
 	        <div id="masonry-container" class="infinite-scroll centered fluid  clearfix">
@@ -111,13 +102,12 @@
                <figcaption>
                  <p class = "art_title"><%= piece.title %></p>
                  <p class = "artist_name"><%= piece.artist.username%></p>
-                 <p>$<%= print.original_value/100 %></p>
+                 <p>$<%= piece.print_value/100 %></p>
                </figcaption>
              </figure>
            <% end %>  
          </div> -->
 	</div>
-
 
 
 <!------------------ MODAL SIGN IN -------------------->

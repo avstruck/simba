@@ -28,7 +28,7 @@
 		<p><span style="color:black">Prints Sold:</span> <%= @piece.number_prints %></p>
 		<p><span style="color:black">Owner:</span> <%= @piece.art_owner_id %></p>
 		<p><span style="color:black">Original:</span> $<%= @piece.original_value%></p>
-		<p><span style="color:black">Print:</span> $<%= @piece.print_value.to_f%></p>
+		<p><span style="color:black">Print:</span> $<%= @piece.print_value/100%></p>
 		<br><br>
 
 	    <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
@@ -39,7 +39,7 @@
 		    data-image= url("/assets/art_show50.png")
 		    data-name="Simba"
 		    data-description="2 widgets ($20.00)"
-		    data-amount=<%= @piece.original_value*100%>>
+		    data-amount=<%= @piece.print_value%>>
 		  </script>
 		  <input type="hidden" name="piece_id" value=<%= @piece.id %>>
 		</form>

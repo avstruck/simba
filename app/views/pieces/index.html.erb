@@ -8,11 +8,12 @@
   <div class="row">
       <nav>
           
-  <!-- NAME / LOGO -->
+  <!-- LOGO -->
         <div class="col-md-1 col-xs-4" id="logo">
       <%= link_to (image_tag asset_path "art_show_50.png"), root_path %> 
         </div>
 
+  <!-- NAME -->
         <div class="nav-item main col-md-3 col-xs-8" id="logo_text">
           <%= link_to "Artshow", root_path %>
         </div>
@@ -120,7 +121,7 @@
                 <p class = "art_title"><%= i.title %></p>
 
                 <p class = "artist_name" id="artist_name_link">by <%=link_to (i.artist_name), "/users/#{i.artist_id}" %></p>
-                <p>$<%= i.original_value/100 %></p>
+                <p>$<%= i.original_value %></p>
 
               </figcaption>
             </figure>

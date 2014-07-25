@@ -37,10 +37,13 @@ hr {
 	margin-top: 20px ;
 }
 
-#upload_button {
+#upload {
 	margin-top: 9px;
 	padding-right: 10px;
+	box-shadow: none 0 0px 0px rgba(0,0,0,0);
 }
+
+
 
 #sign_out_link_gallery {
 	width: 300px;
@@ -101,14 +104,6 @@ hr {
 	color: black;
 
 }
-
-
-#upload_button {
-	margin-top: 15px;
-	margin-right: 10px;
-	box-shadow: none 0 0px 0px rgba(0,0,0,0);
-}
-
 
 
 
