@@ -14,29 +14,14 @@
         </div>
 
   <!-- NAME -->
-        <div class="nav-item main col-md-3 col-xs-8" id="logo_text">
+        <div class="nav-item main col-md-2 col-xs-8" id="logo_text">
           <%= link_to "Artshow", root_path %>
         </div>
+     
 
 
 
-  <!--  SEARCH BAR -->
-          <div class="nav-bar">
-              <div class="nav-item col-md-3 col-xs-12" id="search_bar_div">
-                
-                    <%= form_tag root_path, :method => 'get', id: 'pieces_search' do %>
-                      <p>
-                        <%= search_field_tag 'pieces_search_box', params[:pieces_search_box], :placeholder =>"Search..."%>
-                        <%= submit_tag "", :title => nil, :id => "pieces_search_button" %>
-                      </p>
-                    <%end%>
-
-              </div>
-          </div>      
-
-
-
-<!-- PRICE / GENRE  -->  
+<!-- GENRE  -->  
           <div>
               <div class="nav-item col-md-1" id="price_filter">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Genre <b class="caret"></b></a>
@@ -58,6 +43,8 @@
                     <li><a href="#">Postmodernism</a></li>
                 </ul>
               </div>
+
+<!-- PRICE  --> 
               <div class="nav-item col-md-1 dropdown" id="genre_filter">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Price<b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -70,15 +57,48 @@
           </div>
 
 
-  <!-- SIGN IN / SIGN UP / USERNAME / LOGOUT -->
+  <!-- SIGN IN / SIGN UP / USERNAME / SIGN OUT -->
         <div>
           <% if current_user %>
-            <div class="nav-item col-md-1 col-xs-3" id="username_link"><%= link_to current_user.username, "/users/#{current_user.id}"%>
+            <div class="nav-item col-md-2 col-xs-3" id="username_link"><%= link_to current_user.username, "/users/#{current_user.id}"%>
             </div>
-            <div class="nav-item col-md-1 col-xs-3" id="sign_out_link"><%= link_to "Sign out", destroy_user_session_path, method: :delete%></div>
+
+  <!--  SEARCH BAR -->
+            <div class="nav-bar">
+                <div class="nav-item col-md-3 col-xs-12" id="search_bar_div">
+                  
+                      <%= form_tag root_path, :method => 'get', id: 'pieces_search' do %>
+                        <p>
+                          <%= search_field_tag 'pieces_search_box', params[:pieces_search_box], :placeholder =>"Search..."%>
+                          <%= submit_tag "", :title => nil, :id => "pieces_search_button" %>
+                        </p>
+                      <%end%>
+
+                </div>
+            </div> 
+
+            <div class="nav-item col-md-1 col-xs-3" id="sign_out_link"><%= link_to "Sign out", destroy_user_session_path, method: :delete%>
+            </div>
           <% else %>
-            <div class="nav-item col-md-1 col-xs-3" id="sign_in_link" ><a href="#sign_in" data-toggle="modal">Sign in</a></div>
-            <div class="nav-item col-md-1 col-xs-3" id="sign_up_link"><a href="#sign_up" data-toggle="modal">Sign up</a></div>
+            <div class="nav-item col-md-2 col-xs-3" id="sign_in_link" ><a href="#sign_in" data-toggle="modal">Sign in</a>
+            </div>
+            <div class="nav-item col-md-1 col-xs-3" id="sign_up_link"><a href="#sign_up" data-toggle="modal">Sign up</a>
+            </div>
+
+<!--  SEARCH BAR -->
+          <div class="nav-bar">
+              <div class="nav-item col-md-3 col-xs-12" id="search_bar_div">
+                
+                    <%= form_tag root_path, :method => 'get', id: 'pieces_search' do %>
+                      <p>
+                        <%= search_field_tag 'pieces_search_box', params[:pieces_search_box], :placeholder =>"Search..."%>
+                        <%= submit_tag "", :title => nil, :id => "pieces_search_button" %>
+                      </p>
+                    <%end%>
+
+              </div>
+          </div> 
+
             <% end %>
         </div>
       </nav>

@@ -25,6 +25,14 @@ class User < ActiveRecord::Base
     # self.pieces.inject(&:+)
   end
 
+  def number_of_pieces
+    return self.owned_pieces.count
+  end
+
+  def sold_pieces
+    return self.sell_purchases.count
+  end
+
   def unique_prints
     prints = []
       ids = []

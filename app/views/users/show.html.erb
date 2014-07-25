@@ -38,8 +38,8 @@
             	<div class="nav-item" id="account_link_gallery"><a href="#myModal" data-toggle="modal">Account</a>
             	</div>
           	</div>
-          	<div class="col-md-1">
-	          	<div class="nav-item"  ><%= link_to "SignOut", destroy_user_session_path, method: :delete%>
+          	<div class="col-md-2">
+	          	<div class="nav-item"  ><%= link_to "Sign Out", destroy_user_session_path, method: :delete%>
 	           	</div>
 	        </div>
 	      <% else %>
@@ -65,7 +65,9 @@
 	<% if user_signed_in? && current_user.id == @user.id %>
 
 
-  		The total value of your gallery is $<%= current_user.gallery_value %>.
+  		You own <%= current_user.number_of_pieces %> pieces valuing $<%= current_user.gallery_value %>. <br><br>
+      You have sold <%= current_user.sold_pieces %> pieces for a total of $$$. <br><br>
+      Your average sale price is $$$.
 	<%end%>
   	
   		<%= @user.bio %>
@@ -74,7 +76,6 @@
 
 
 <!------------------ BROWSE GALLERY -------------------->
-    <br><br><br><br><br><br> 
     <div class="browse_content" id="browse_gallery">
 	        <h4 class="gallery_label">Your Works</h4>
 	        <hr>

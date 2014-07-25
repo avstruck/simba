@@ -12,7 +12,7 @@ class PurchasesController < ApplicationController
     token = params[:stripeToken]
 
     piece = Piece.find(params[:piece_id])
-    price = piece.print_value
+    price = piece.original_value
 
     # Create the charge on Stripe's servers - this will charge the user's card
     begin
@@ -24,9 +24,11 @@ class PurchasesController < ApplicationController
       )
 
       # Create a new Purchase instance to record the transaction
+      # Note: I removed the automatic price updating from piece.update_attributes
+      # Note: + signs were making errors when updating original_value and number_prints so I removed them
       @purchase = Purchase.create(quantity: 1, purchase_price: price, piece_id: piece.id)
                
-      piece.update_attributes(original_value: piece.original_value + 100, number_prints: piece.number_prints + 1)
+      piece.update_attributes(original_value: piece.original_value, number_prints: piece.number_prints)
           
       # Create a new Print if user logged in, and update purchase to record buyer
       if user_signed_in?
